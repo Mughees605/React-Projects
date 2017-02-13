@@ -1,33 +1,75 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router,Route,hashHistory,Link} from "react-router"
-import About from "./components/About.js";
-import Contact from "./components/Contact.js"
+import {Router,Route,hashHistory,Link,IndexRoute} from "react-router"
+var Modal = require("./components/modal.js");
+var Product = require('./components/product.js')
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
-class Nav extends React.Component{
+const PRODUCTS = [
+  { id: 0, src: 'https://www.drupal.org/files/book_covers/1430231351-the-definitive-guide-to-drupal-7.jpg', title: 'Pro Express.js', url: 'http://amzn.to/1D6qiqk' },
+  { id: 1, src: 'https://www.drupal.org/files/book_covers/1430231351-the-definitive-guide-to-drupal-7.jpg', title: 'Practical Node.js', url: 'http://amzn.to/NuQ0fM' },
+  { id: 2, src: 'https://www.drupal.org/files/book_covers/1430231351-the-definitive-guide-to-drupal-7.jpg', title: 'Express API Reference', url: 'http://amzn.to/1xcHanf' },
+  { id: 3, src: 'https://www.drupal.org/files/book_covers/1430231351-the-definitive-guide-to-drupal-7.jpg', title: 'React Quickly', url: 'https://www.manning.com/books/react-quickly'},
+  { id: 4, src: 'https://www.drupal.org/files/book_covers/1430231351-the-definitive-guide-to-drupal-7.jpg', title: 'Full Stack JavaScript', url: 'http://www.apress.com/9781484217504'}
+];
+
+var App = React.createClass({
   componentWillReceiveProps(nextProps){
-  console.log(nextProps.location);
+    this.isModal = nextProps.location.key;
+    if (this.isModal &&
+      nextProps.location.key !== this.props.location.key) {
+      this.previousChildren = this.props.children
+    }
+  },
+  render:function(){
+    if(this.isModal){
+      return <Modal><Product /></Modal>
+    }
+    else{
+    return(
+      <div class = "well">
+          {this.props.children}    
+      </div>
+    )
+   }
   }
-  render(){
+})
+
+var Index = React.createClass({
+  render:function(){
     return (
       <div>
-      <ul>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-      </ul>
-      {this.props.children}
-    </div>
-    
+        <p><Link to="/cart" className="btn btn-danger">Cart</Link></p>
+        <div>
+          {PRODUCTS.map(picture => (
+            <Link key={picture.id}
+              to={{pathname: `/products/${picture.id}`,
+                state: { modal: true,
+                  returnTo: this.props.location.pathname }
+                }
+              }>
+              <img style={{ margin: 10 }} src={picture.src} height="100" />
+            </Link>
+          ))}
+        </div>
+      </div>
     )
   }
-}
+})
 
+let cartItems = {}
+const addToCart = (id) => {
+  if (cartItems[id])
+    cartItems[id] += 1
+  else
+    cartItems[id] = 1
+}
 ReactDOM.render(
   <Router history={hashHistory}>
-    <Route path="/" component={Nav}>
-       <Route path="contact" component={Contact} />
-       <Route path="about" component={About}/>
+    <Route path="/" component={App}> 
+     <IndexRoute component = {Index}/>
+       <Route path="/products/:id" component={Product} addToCart = {addToCart} products={PRODUCTS} />
     </Route>
   </Router>
   ,
