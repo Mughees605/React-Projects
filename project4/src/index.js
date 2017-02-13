@@ -17,11 +17,9 @@ const PRODUCTS = [
 
 var App = React.createClass({
   componentWillReceiveProps(nextProps){
+    console.log(nextProps.location.key);
     this.isModal = nextProps.location.key;
-    if (this.isModal &&
-      nextProps.location.key !== this.props.location.key) {
-      this.previousChildren = this.props.children
-    }
+    console.log(this.isModal);
   },
   render:function(){
     if(this.isModal){
