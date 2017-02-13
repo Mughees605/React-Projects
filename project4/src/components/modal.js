@@ -24,6 +24,7 @@ class Modal extends React.Component {
     return (
       <div style={this.styles}>
         <button className = "btn btn-default"><Link to="/">Back</Link></button>
+        {this.props.children}
     
       </div>
     )

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Router,Route,hashHistory,Link,IndexRoute} from "react-router"
 var Modal = require("./components/modal.js");
 var Product = require('./components/product.js')
+var Cart = require('./components/cart.js')
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -24,7 +25,7 @@ var App = React.createClass({
   },
   render:function(){
     if(this.isModal){
-      return <Modal><Product /></Modal>
+      return <Modal isOpen = {true}>{this.props.children}</Modal>
     }
     else{
     return(
@@ -70,6 +71,8 @@ ReactDOM.render(
     <Route path="/" component={App}> 
      <IndexRoute component = {Index}/>
        <Route path="/products/:id" component={Product} addToCart = {addToCart} products={PRODUCTS} />
+       <Route path="/cart" component={Cart}
+      cartItems={cartItems} products={PRODUCTS}/>
     </Route>
   </Router>
   ,

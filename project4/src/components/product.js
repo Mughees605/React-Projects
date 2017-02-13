@@ -14,6 +14,7 @@ class Product extends React.Component {
   render() {
     return (
       <div>
+          
         <img src={this.props.route.products[this.props.params.id].src} style={{ height: '80%' }} />
         <p>{this.props.route.products[this.props.params.id].title}</p>
         <Link
