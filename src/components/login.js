@@ -1,13 +1,13 @@
 import React from "react"
-import { hashHistory } from "react-router";
-import myFirebase from "../firebase/firebase"
+// import { hashHistory } from "react-router";
+// import myFirebase from "../firebase/firebase"
 var { connect } = require("react-redux")
 var actions = require("../actions/index.js")
 
 class Login extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
-        this.handleLogin = this.handleLogin.bind(this);
+        this.handleLogin=this.handleLogin.bind(this);
     }
     handleLogin(e) {
         e.preventDefault();
