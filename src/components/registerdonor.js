@@ -1,15 +1,16 @@
 import React from "react"
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 var actions = require("../actions/index.js")
 
 class Register extends React.Component {
     constructor(props) {
         super(props)
         this.handleRegister = this.handleRegister.bind(this);
+        this.handleBlood = this.handleBlood.bind(this);
     }
     handleRegister(e) {
         e.preventDefault();
-        var {dispatch} = this.props;
+        var { dispatch } = this.props;
         var registerObj = {};
         registerObj.userName = this.refs.username.value;
         registerObj.address = this.refs.address.value;
@@ -18,6 +19,13 @@ class Register extends React.Component {
         registerObj.bloodGroup = this.refs.select.value;
         dispatch(actions.pushData(registerObj));
 
+    }
+    handleBlood(e) {
+        e.preventDefault();
+        var { dispatch } = this.props;
+        var value = this.refs.blood.value
+        console.log(value, " component test")
+        dispatch(actions.searchData(value))
     }
     render() {
         return (
@@ -51,6 +59,10 @@ class Register extends React.Component {
                             <option value="O">O</option>
                         </select>
                     </div>
+                </form>
+                <form onSubmit={this.handleBlood} style={{ textAlign: "center" }}>
+                    <input type="text" placeholder="search your donors" ref="blood" />
+                    <button>submit</button>
                 </form>
             </div>
         )
