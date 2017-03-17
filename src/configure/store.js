@@ -1,13 +1,12 @@
-var Redux = require('redux');
-var { signUpReducer } = require('../reducer/reducer');
-import { applyMiddleware } from "redux"
-var thunk = require('redux-thunk').default;
-var logger = require("redux-logger")
+import * as Redux from "redux";
+import { applyMiddleware } from "redux";
+import { getRepoReducer } from "../reducer/index.js";
+import thunk from "redux-thunk";
+import logger from "redux-logger";
 
 export var storeConfig = function () {
     var reducer = Redux.combineReducers({
-
-        loginsignupReducer: signUpReducer,
+        getRepoReducer
     });
 
     const middleWare = applyMiddleware(thunk, logger())
