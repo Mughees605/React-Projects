@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from "./components/App"
-import {Provider} from "react-redux";
-var store = require("./configure/store.js").storeConfig();
+import Main from "./containers/main.js"
+import { Provider } from "react-redux";
+var store = require("./store/store.js").storeConfig();
 ReactDOM.render(
- <Provider store = {store}>
-   <App/>
- </Provider>
- ,
+  <Provider store={store}>
+    <Main />
+  </Provider>
+  ,
   document.getElementById('root')
 );
