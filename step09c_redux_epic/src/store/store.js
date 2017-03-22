@@ -1,6 +1,6 @@
 import Redux from "redux";
 import {applyMiddleware, combineReducers, createStore} from "redux";
-import {getRepoReducer, CounterReducer} from "./reducer/index.js";
+import {CounterReducer} from "./reducer/index.js";
 import {combineEpics, createEpicMiddleware} from 'redux-observable';
 import {counterEpic} from "./epic/epic.js"
 import thunk from "redux-thunk";
@@ -11,7 +11,7 @@ export var storeConfig = function () {
 
     const epicMiddleware = createEpicMiddleware(rootEpic);
     
-    var reducer = combineReducers({getRepoReducer, CounterReducer});
+    var reducer = combineReducers({CounterReducer});
 
     const createStoreWithMiddleware = applyMiddleware(epicMiddleware)(createStore)
 
