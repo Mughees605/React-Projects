@@ -7,15 +7,14 @@ class Main extends Component {
         return (
             <div>
                 <h1>{this.props.counterReducer}</h1>
-            <App data={this.props.value}/>
+            <App data={this.props.counterReducer}/>
             </div>
         )
     }
 }
 export default connect((state) => {
-    var value = state.getRepoReducer
+  
     return {
-        value,
         counterReducer:state.CounterReducer
     }
 })(Main);
