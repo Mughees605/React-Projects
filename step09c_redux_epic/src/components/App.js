@@ -20,7 +20,9 @@ class App extends Component {
         <button onClick={this
           .handleIncrement
           .bind(this)}>+</button>
-        <button onClick={this.handleDecrement.bind(this)}>-</button>
+        <button onClick={this
+          .handleDecrement
+          .bind(this)}>-</button>
       </div>
     );
   }
