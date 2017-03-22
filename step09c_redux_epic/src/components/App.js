@@ -8,7 +8,10 @@ class App extends Component {
     var {dispatch} = this.props;
     dispatch(CounterAction.asyncIncrement());
   }
-  handleDecrement() {}
+  handleDecrement() {
+    var {dispatch} = this.props;
+    dispatch(CounterAction.asyncDecrement());
+  }
   render() {
     return (
 
