@@ -13,7 +13,7 @@ class App extends Component {
     return (
 
       <div>
-      {this.props.data}
+        <h1>{this.props.data}</h1>
         <button onClick={this
           .handleIncrement
           .bind(this)}>+</button>

@@ -6,7 +6,6 @@ class Main extends Component {
     render() {
         return (
             <div>
-                <h1>{this.props.counterReducer}</h1>
             <App data={this.props.counterReducer}/>
             </div>
         )
