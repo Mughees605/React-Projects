@@ -8,10 +8,12 @@ export default class CounterAction {
         return {type: CounterAction.INCREMENT_ASYNC}
     }
     static asyncDecrement() {
-        return {type: CounterAction.INCREMENT_ASYNC}
+        console.log("decrement async");
+        return {type: CounterAction.DECREMENT_ASYNC}
     }
     static Decrement() {
-        return {type: CounterAction.DECREMENT;}
+        
+        return {type: CounterAction.DECREMENT}
     }
     static Increment() {
         console.log("increment action");

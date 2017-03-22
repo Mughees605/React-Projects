@@ -12,6 +12,16 @@ class CounterEpic{
                 payload:null    
             })
         })
+
+        decrement = (action$)=>
+        action$.ofType(CounterAction.DECREMENT_ASYNC)
+        .delay(1000)
+        .switchMap(({payload})=>{
+            return Observable.of({
+                type:CounterAction.DECREMENT,
+                payload:null
+            })
+        })
     
 }
 export let counterEpic = new CounterEpic();

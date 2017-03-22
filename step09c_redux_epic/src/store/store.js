@@ -7,13 +7,13 @@ import thunk from "redux-thunk";
 import logger from "redux-logger";
 
 export var storeConfig = function () {
-    const rootEpic = combineEpics(counterEpic.increment);
+    const rootEpic = combineEpics(counterEpic.increment,counterEpic.decrement);
 
     const epicMiddleware = createEpicMiddleware(rootEpic);
     
     var reducer = combineReducers({CounterReducer});
 
-    const createStoreWithMiddleware = applyMiddleware(epicMiddleware)(createStore)
+    const createStoreWithMiddleware = applyMiddleware(epicMiddleware,logger())(createStore)
 
     const middleWare = applyMiddleware(epicMiddleware);
     var store = createStoreWithMiddleware(reducer,
