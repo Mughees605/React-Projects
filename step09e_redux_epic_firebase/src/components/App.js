@@ -1,8 +1,15 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux"
 import {TodoAction} from "../store/actions/index.js"
+var store = require("../store/store.js").storeConfig();
 
+store.dispatch(TodoAction.getTodo());
 class App extends Component {
+
+  constructor(){
+    super()
+  
+  }
 
   handleTodo(e) {
     e.preventDefault();

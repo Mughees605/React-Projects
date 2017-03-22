@@ -7,7 +7,7 @@ import thunk from "redux-thunk";
 import logger from "redux-logger";
 
 export var storeConfig = function () {
-    const rootEpic = combineEpics(todoEpic.addTodo);
+    const rootEpic = combineEpics(todoEpic.addTodo,todoEpic.getTodos);
 
     const epicMiddleware = createEpicMiddleware(rootEpic);
     
