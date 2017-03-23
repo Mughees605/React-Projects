@@ -17,8 +17,8 @@ class App extends Component {
 
   }
   render() {
-    var {data} = this.props;
-    let todoList = Object.keys(data).map(function(key,index){
+    var { data } = this.props;
+    let todoList = Object.keys(data).map(function (key, index) {
       let val = data[key];
       return (
         <li key={index}>{val}</li>
