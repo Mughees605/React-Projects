@@ -22,13 +22,15 @@ getTodos = (action$) => action$
         .ofType(TodoAction.GET_TODO)
         .switchMap(({payload}) => {
             return new Observable((observer) => {
-                ref.on("child_added", (snapshot) => {
+                ref.on("value", (snapshot) => {
+                    var parsedTodo = [];
+                    var todos = snapshot.val() || {};
+                    for(var key in todos){
+                        parsedTodo.push(todos[key])
+                    }
                     observer.next({
                         type: TodoAction.GET_TODO_ADDED,
-                        payload: {
-                            key: snapshot.key,
-                            val: snapshot.val()
-                        }
+                        payload:parsedTodo
                     })
                 })
             })

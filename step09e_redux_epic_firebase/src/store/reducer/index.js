@@ -1,10 +1,10 @@
 import {TodoAction} from "../actions"
-export var TodoReducer = (state = {},action)=>{
+export var TodoReducer = (state = [],action)=>{
     switch(action.type){
-        case TodoAction.ADD_TODO:
+        case TodoAction.GET_TODO_ADDED:
         return {
             ...state,
-            text:action.payload
+            payload:action.payload
         }
         default :
         return state;
