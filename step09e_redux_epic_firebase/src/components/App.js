@@ -18,6 +18,12 @@ class App extends Component {
   }
   render() {
     var {data} = this.props;
+    let todoList = Object.keys(data).map(function(key,index){
+      let val = data[key];
+      return (
+        <li key={index}>{val}</li>
+      )
+    })
     return (
 
       <div>
@@ -26,8 +32,9 @@ class App extends Component {
           .bind(this)}>
           <input type="text" ref="text" />
           <button type="submit">Add Todo</button>
+          {todoList}
         </form>
-       {console.log(data,"a")}
+
       </div>
     );
   }
