@@ -1,12 +1,12 @@
-import {TodoAction} from "../actions"
-export var TodoReducer = (state = [],action)=>{
-    switch(action.type){
+import { TodoAction } from "../actions"
+export var TodoReducer = (state = [], action) => {
+    switch (action.type) {
         case TodoAction.GET_TODO_ADDED:
-        return {
-            ...state,
-            payload:action.payload
-        }
-        default :
-        return state;
+            return {
+                ...state,
+                payload: action.payload
+            }
+        default:
+            return state;
     }
 }
