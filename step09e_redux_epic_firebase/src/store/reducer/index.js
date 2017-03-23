@@ -4,7 +4,7 @@ export var TodoReducer = (state = [], action) => {
         case TodoAction.GET_TODO_ADDED:
             return {
                 ...state,
-                payload: action.payload
+                payload: action.payload.parsedTodo
             }
         default:
             return state;
