@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import App from "../components/App.js"
-import {TodoAction} from "../store/actions"
+import { TodoAction } from "../store/actions"
 
 function mapStateToProps(state) {
     return {
@@ -19,10 +19,10 @@ class Main extends Component {
         this.props.getTodos();
 
     }
-    renderData(){
-        var {todos} = this.props;
-        if(todos){
-            return  <App data={todos} />
+    renderData() {
+        var { todos } = this.props;
+        if (todos) {
+            return <App data={todos} />
         }
         else {
             return <p>error</p>
@@ -36,4 +36,4 @@ class Main extends Component {
         )
     }
 }
-export default connect(mapStateToProps,mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
