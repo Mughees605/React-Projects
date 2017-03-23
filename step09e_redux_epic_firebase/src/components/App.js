@@ -26,7 +26,7 @@ class App extends Component {
           <input type="text" ref="text" />
           <button type="submit">Add Todo</button>
         </form>
-        {this.props.data.map(function(val,i){
+        {this.props.data.map(function (val, i) {
           return <p key={i}>{val}</p>
         })}
       </div>
