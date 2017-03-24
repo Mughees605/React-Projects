@@ -2,25 +2,12 @@ import React, { Component } from 'react';
 import { connect } from "react-redux"
 import { TodoAction } from "../store/actions/index.js"
 var store = require("../store/store.js").storeConfig();
-class TodoList extends Component {
-  remove(key) {
-    this.props.onRemove(this.props.index)
-  }
-  render() {
-    return (
-      <li>{this.props.children}
-
-        <button onClick={this.remove.bind(this)}>delete</button>
-      </li>
-    )
-  }
-}
 
 class App extends Component {
 
   constructor() {
     super()
-
+ 
   }
 
   handleTodo(e) {
@@ -31,23 +18,23 @@ class App extends Component {
 
   }
   handleRemove(key) {
-   console.log(key)
-  }
-  eachNote(key, index) {
-    return <TodoList key={index} index={key} onRemove={this.handleRemove}>{}</TodoList>
+    var {dispatch} = this.props;
+    dispatch(TodoAction.deleteTodo(key))
+    console.log(key)
   }
 
   render() {
-    var {data} = this.props;
-    var that = this;
-    var todoList = Object.keys(data).map(function(key,index){
+    var { data } = this.props;
+    var todoList = Object.keys(data).map((key, index)=> {
       var val = data[key];
       return (
-        <p key={index} onClick={()=>{that.handleRemove(key)}}>{val}</p>
+        <div key={index}>
+          <p>{val}</p>
+          <button onClick={() => { this.handleRemove(key) }}>delete</button>
+        </div>
       )
     })
 
-  console.log(data)
     return (
 
       <div>

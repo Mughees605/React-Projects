@@ -17,21 +17,12 @@ class Main extends Component {
     constructor(props) {
         super(props)
         this.props.getTodos();
-
-    }
-    renderData() {
-        var { todos } = this.props;
-        if (todos) {
-            return <App data={todos} />
-        }
-        else {
-            return <p>error</p>
-        }
     }
     render() {
         return (
             <div>
-                {this.renderData()}
+                {(this.props.todos) ?  <App data={this.props.todos} /> : "nodata"}
+                {/*<App/>*/}
             </div>
         )
     }
