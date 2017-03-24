@@ -7,7 +7,7 @@ class App extends Component {
 
   constructor() {
     super()
- 
+
   }
 
   handleTodo(e) {
@@ -18,14 +18,14 @@ class App extends Component {
 
   }
   handleRemove(key) {
-    var {dispatch} = this.props;
+    var { dispatch } = this.props;
     dispatch(TodoAction.deleteTodo(key))
     console.log(key)
   }
 
   render() {
     var { data } = this.props;
-    var todoList = Object.keys(data).map((key, index)=> {
+    var todoList = Object.keys(data).map((key, index) => {
       var val = data[key];
       return (
         <div key={index}>
