@@ -18,7 +18,6 @@ class Login extends Component {
                     onSubmit={this
                     .handleSignUp
                     .bind(this)}>
-                    <h1>SIGN UP</h1>
                     <input type="text" ref="email"/><br/><br/>
                     <input type="password" ref="password"/><br/><br/>
                     <button>signup</button>

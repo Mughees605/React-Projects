@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from "./components/App.js"
 import SignUp from "./components/signup.js"
-import Login from "./components/login.js"
+import Login from "./components/Login.js"
 import {Provider} from "react-redux";
 import {Router, Route, hashHistory, IndexRoute} from "react-router"
 var store = require("./store/store.js").storeConfig();
