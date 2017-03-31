@@ -38,8 +38,8 @@ class AllUsersCont extends React.Component {
                 <Table>
                     <TableHeader>
                         <TableRow>
-                              <TableHeaderColumn>Img</TableHeaderColumn>
-                            <TableHeaderColumn>ID</TableHeaderColumn>                       
+                              <TableHeaderColumn>Free Code Camper</TableHeaderColumn>
+                            <TableHeaderColumn>Rank</TableHeaderColumn>                       
                             <TableHeaderColumn>Name</TableHeaderColumn>
                             <TableHeaderColumn>Last Update</TableHeaderColumn>
                            
