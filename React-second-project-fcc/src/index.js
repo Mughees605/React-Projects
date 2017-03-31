@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider"
-import {Router, Route, hashHistory} from "react-router";
+import {Router, Route, hashHistory, IndexRoute} from "react-router";
 
 import {Provider} from 'react-redux';
 import store from './store'
@@ -19,8 +19,8 @@ ReactDOM.render(
         <Router history={hashHistory}>
 
             <Route path="/" component={Main}>
+                <IndexRoute component={AllUsers}/>
                 <Route path="top-user" component={TopUsers}></Route>
-                <Route path="all-user" component={AllUsers}></Route>
             </Route>
 
         </Router>
