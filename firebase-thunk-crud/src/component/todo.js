@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { TodoAction } from "../store/action"
+import {CircularProgress} from 'material-ui'
 
 function mapStateToProps(state) {
     return {
@@ -22,7 +23,7 @@ class Todo extends Component {
     }
     renderDisplay() {
         return (
-            <div>
+            <div style={{width:"500px",margin:"0px auto"}}>
                 <form onSubmit={this.handleAddTodo.bind(this)}>
                     <input type="text" ref="text" />
                     <button>Add</button>
@@ -39,7 +40,11 @@ class Todo extends Component {
                 return this.renderDisplay()
            }
            else{
-             return  <p>Loading...............</p>
+             return  (
+                 <div style={{width:"500px",margin:"0px auto"}}>
+                       <CircularProgress/>
+                 </div>
+             )
            }
         
     }
