@@ -1,7 +1,7 @@
 import { Observable } from "rxjs";  
 import signUpLogin from "../actions/index.js"
 
-class CounterEpic{
+class  CounterEpic{
 
     // increment = (action$)=>
     //     action$.ofType(CounterAction.INCREMENT_ASYNC)
@@ -22,6 +22,7 @@ class CounterEpic{
     //             payload:null
     //         })
     //     })
-    
+
+    signup = 
 }
 export let counterEpic = new CounterEpic();
