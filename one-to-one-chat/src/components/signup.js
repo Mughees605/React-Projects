@@ -1,37 +1,13 @@
-import React, {Component} from "react";
-import {TextField, Paper,RaisedButton} from "material-ui";
-
+import React, {Component} from "react"; 
+import SignUpCont from "../container/signup.js"
 class SignUp extends Component {
 
-    handleSignup(){
-        var credentials = {};
-        credentials.name = this.refs.name.getValue();
-        credentials.email = this.refs.email.getValue();
-        alert(credentials.email);
-    }
-    render() {
-        return (
-            <div
-                style={{
-                width: "400px",
-                margin: "20px auto",
-                textAlign: "center"
-            }}>
-                <Paper zDepth={3}>
-                    <h1>SignUp</h1>
-                    <TextField floatingLabelText="Type your name" ref="name" fullWidth={true}/>
-                    <br/>
-                    <TextField floatingLabelText="Type your email" ref="email" fullWidth={true}/>
-                    <br/>
-                    <TextField
-                        floatingLabelText="type your password"
-                        type="password"
-                        fullWidth={true}/>
-                    <br/>
-                    <RaisedButton fullWidth={true} onClick={this.handleSignup.bind(this)}>SignUp</RaisedButton>
-                </Paper>
-            </div>
-        )
-    }
+   render(){
+       return(
+           <div>
+                <SignUpCont/>
+           </div>
+       )
+   }
 }
-export default SignUp;
+export default (SignUp);
