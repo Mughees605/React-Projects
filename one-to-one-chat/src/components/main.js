@@ -4,8 +4,7 @@ import {FlatButton, AppBar, IconButton} from "material-ui";
 const App = () => (
   <AppBar
     title={<span>Title</span>}
-    iconElementLeft={<IconButton></IconButton>}
-    iconElementRight={<FlatButton label="Save" />}
+    iconElementRight={<span><FlatButton label="SignUp" /> <FlatButton label="Login" /></span>}
   />
 );
 
