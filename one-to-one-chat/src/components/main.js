@@ -1,12 +1,22 @@
-import React , {Component} from "react";
+import React, {Component} from "react"
+import {FlatButton, AppBar, IconButton} from "material-ui";
 
-class Main extends React.Component{
-    render(){
-        return(
+const App = () => (
+  <AppBar
+    title={<span>Title</span>}
+    iconElementLeft={<IconButton></IconButton>}
+    iconElementRight={<FlatButton label="Save" />}
+  />
+);
+
+class Main extends Component {
+    render() {
+        return (
             <div>
-                <h1>Main Component</h1>
+                <App/>
+           {this.props.children}
             </div>
         )
     }
 }
-export default Main
+export default Main;
