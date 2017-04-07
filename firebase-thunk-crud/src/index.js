@@ -5,6 +5,10 @@ import './index.css';
 import { Provider } from "react-redux";
 import { store } from "./store/store.js"
 import {TodoAction} from "./store/action"
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
+
 store.dispatch(TodoAction.fetchingData());
 ReactDOM.render(
   <Provider store={store}>
