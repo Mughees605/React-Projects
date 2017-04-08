@@ -1,18 +1,9 @@
 import React, {Component} from "react";
-import {TextField, Paper, RaisedButton} from "material-ui";
+import {Paper} from "material-ui";
+import LoginCont from "../container/login"
 
 class Login extends Component {
-    handleLogin() {
-        var credentials = {};
-        credentials.email = this
-            .refs
-            .email
-            .getValue();
-        credential.password = this
-            .refs
-            .pass
-            .getValue();
-    }
+  
     render() {
         return (
             <div
@@ -23,15 +14,7 @@ class Login extends Component {
             }}>
                 <Paper zDepth={3}>
                     <h1>Login</h1>
-                    <TextField floatingLabelText="Type your email" ref="email" fullWidth={true}/>
-                    <br/>
-                    <TextField
-                        floatingLabelText="type your password"
-                        ref="password"
-                        type="password"
-                        fullWidth={true}/>
-                    <br/>
-                    <RaisedButton fullWidth={true}>Login</RaisedButton>
+                    <LoginCont/>
                 </Paper>
             </div>
         )
