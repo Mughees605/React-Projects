@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import {TextField, Paper, RaisedButton} from "material-ui";
+import {LoginAction} from "../store/action/login";
+import {connect} from "react-redux";
 
 class LoginCont extends Component {
       handleLogin() {
@@ -12,7 +14,7 @@ class LoginCont extends Component {
             .refs
             .password
             .getValue();
-            alert(credentials.email)
+            this.props.dispatch(LoginAction.login(credentials)); // dispatching action
     }
     render() {
         return (
@@ -34,4 +36,4 @@ class LoginCont extends Component {
         )
     }
 }
-export default LoginCont;
+export default connect()(LoginCont);

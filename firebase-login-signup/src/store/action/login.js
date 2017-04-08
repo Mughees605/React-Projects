@@ -6,7 +6,7 @@ export class LoginAction{
     static login(credentials){
         return {
             type:LoginAction.LOGIN,
-            payload:null
+            payload:credentials
         }
     }
     static loginSucess(){
