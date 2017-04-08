@@ -3,7 +3,7 @@ import {Paper} from "material-ui";
 import LoginCont from "../container/login"
 
 class Login extends Component {
-  
+
     render() {
         return (
             <div
