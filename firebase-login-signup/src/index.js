@@ -22,9 +22,7 @@ ReactDOM.render(
         <IndexRoute component={Login}/>
         <Route path="signup" component={SignUp}/>
       </Route>
-      <Route path="dashboard" component={DashBoard}>
-     
-      </Route>
+      <Route path="dashboard" component={DashBoard}></Route>
     </Router>
-  </MuiThemeProvider> 
+  </MuiThemeProvider>
 </Provider>, document.getElementById('root'));
