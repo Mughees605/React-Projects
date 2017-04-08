@@ -1,5 +1,9 @@
 import React, {Component} from "react"
 import {FlatButton, AppBar, IconButton} from "material-ui";
+import {connect} from "react-redux";
+
+
+
 
 const App = () => (
   <AppBar
@@ -9,6 +13,7 @@ const App = () => (
 );
 
 class Main extends Component {
+   
     render() {
         return (
             <div>
@@ -18,4 +23,4 @@ class Main extends Component {
         )
     }
 }
-export default Main;
+export default connect()(Main);

@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Main from "./components/main.js";
 import Login from "./components/login.js";
 import SignUp from "./components/signup.js";
+import DashBoard from "./components/dashboard.js"
 //component end
 import {Provider} from "react-redux";
 import {store} from "./store/store.js"
@@ -20,6 +21,9 @@ ReactDOM.render(
       <Route component={Main} path="/">
         <IndexRoute component={Login}/>
         <Route path="signup" component={SignUp}/>
+      </Route>
+      <Route path="dashboard" component={DashBoard}>
+     
       </Route>
     </Router>
   </MuiThemeProvider> 

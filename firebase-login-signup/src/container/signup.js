@@ -35,7 +35,7 @@ class SignUpCont extends Component {
                 textAlign: "center"
             }}>
                 <Paper zDepth={3}>
-                    
+
                     <h1>SignUp</h1>
                     <TextField floatingLabelText="Type your name" ref="name" fullWidth={true}/>
                     <br/>
