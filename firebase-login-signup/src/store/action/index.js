@@ -1,10 +1,11 @@
 import firebase from "../../firebase";
 import {hashHistory} from "react-router";
-export class loginAction {
+export class SignUpAction {
 
     static SIGNUP = "SIGNUP";
     static SIGN_UP_SUCESS = "SIGN_UP_SUCESS"
     static SIGN_UP_UNSUCESS = "SIGN_UP_UNSUCESS"
+    static LOGIN = "LOGIN";
 
     static SignUp(credentials) {
         return (dispatch) => {
@@ -12,19 +13,19 @@ export class loginAction {
                 .auth()
                 .createUserWithEmailAndPassword(credentials.email, credentials.password)
                 .then((res) => {
-                    dispatch(loginAction.SignUpSucess());
+                    dispatch(SignUpAction.SignUpSucess());
                     hashHistory.push("/");
                 })
                 .catch((err) => {
-                    alert(err.message )
-                    dispatch(loginAction.SignUpUnSucess());
+                    alert(err.message)
+                    dispatch(SignUpAction.SignUpUnSucess());
                 });
         }
     }
     static SignUpSucess() {
-        return {type: loginAction.SIGN_UP_SUCESS}
+        return {type: SignUpAction.SIGN_UP_SUCESS}
     }
     static SignUpUnSucess() {
-        return {type: loginAction.SIGN_UP_UNSUCESS}
+        return {type: SignUpAction.SIGN_UP_UNSUCESS}
     }
 }

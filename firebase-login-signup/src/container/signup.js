@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {TextField, Paper, RaisedButton} from "material-ui";
-import {loginAction} from "../store/action";
+import {SignUpAction} from "../store/action";
 import {connect} from "react-redux";
 function mapStateToProps(state) {
     return {isSignUp: state.isSignUp}
@@ -23,7 +23,7 @@ class SignUpCont extends Component {
             .getValue();
         this
             .props
-            .dispatch(loginAction.SignUp(credentials))
+            .dispatch(SignUpAction.SignUp(credentials))
 
     }
     render() {
