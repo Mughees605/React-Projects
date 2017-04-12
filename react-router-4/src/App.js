@@ -1,41 +1,51 @@
-import React from 'react'
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import React from "react";
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
-const ParamsExample = () => (
-  <Router>
-    <div>
-      <Links/>
-      <Route path="/:id" component={Child}/>
-    </div>
-  </Router>
-)
-
-const Links = () => {
-  return (
-    <div>
-      <h2>Accounts</h2>
-      <ul>
-        <li>
-          <Link to="/netflix">Netflix</Link>
-        </li>
-        <li>
-          <Link to="/zillow-group">Zillow Group</Link>
-        </li>
-        <li>
-          <Link to="/yahoo">Yahoo</Link>
-        </li>
-        <li>
-          <Link to="/modus-create">Modus Create</Link>
-        </li>
-      </ul>
-    </div>
-  )
+class App extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      gists:null
+    }
+  }
+  componentDidMount() {
+    fetch("https://api.github.com/gists")
+      .then(res => res.json())
+      .then((gists) => {
+        this.setState({gists})
+      })
+  }
+  render() {
+    const {gists} = this.state;
+    return(
+      <Router>
+        <div>
+          {gists ? (
+            gists.map((gist,i)=>(
+              <Link to={`/g/${gist.id}`} key={i}><div>{gist.description}</div></Link>
+            ))
+          ):(
+            <div>.....Loading</div>
+          )}
+          <Route exact={true} path="/" render={()=>(<h1>Welcome</h1>)}/>
+          {gists && (
+            <Route path="/g/:gistid" render={({match})=>( 
+              
+              <Gist gist={gists.find(g=>g.id === match.params.gistid)}/>
+              )}/>
+            )}
+          
+        </div>
+      </Router>
+    )
+  }
 }
 
-const Child = ({match}) => (
-  <div>
-    <h3>ID: {match.params.id}</h3>
-  </div>
-)
-
-export default ParamsExample
+const Gist=({gist})=>{
+ return (
+   <div>
+    <h1>{gist.description}</h1>
+   </div>
+ )
+}
+export default App
