@@ -1,60 +1,25 @@
 import React, {Component} from "react";
-import {TextField, Paper, RaisedButton} from "material-ui";
 import {SignUpAction} from "../store/action";
 import {connect} from "react-redux";
+import SignUp from '../components/signup';
+
 function mapStateToProps(state) {
     return {isSignUp: state.isSignUp}
 }
 
 class SignUpCont extends Component {
-    handleSignup() {
-        var credentials = {};
-        credentials.name = this
-            .refs
-            .name
-            .getValue();
-        credentials.email = this
-            .refs
-            .email
-            .getValue();
-        credentials.password = this
-            .refs
-            .pass
-            .getValue();
-        this
-            .props
-            .dispatch(SignUpAction.SignUp(credentials))
 
+    _handleSignup(userObj) {
+        console.log(userObj, "userDataaa");
+        this.props.dispatch(SignUpAction.SignUp(userObj));
     }
+
     render() {
         return (
-            <div
-                style={{
-                width: "400px",
-                margin: "20px auto",
-                textAlign: "center"
-            }}>
-                <Paper zDepth={3}>
-
-                    <h1>SignUp</h1>
-                    <TextField floatingLabelText="Type your name" ref="name" fullWidth={true}/>
-                    <br/>
-                    <TextField floatingLabelText="Type your email" ref="email" fullWidth={true}/>
-                    <br/>
-                    <TextField
-                        floatingLabelText="type your password"
-                        ref="pass"
-                        type="password"
-                        fullWidth={true}/>
-                    <br/>
-                    <RaisedButton
-                        fullWidth={true}
-                        onClick={this
-                        .handleSignup
-                        .bind(this)}>SignUp</RaisedButton>
-                </Paper>
+            <div>
+                <SignUp onSignup={this._handleSignup.bind(this)}/>;
             </div>
-        )
+        );
     }
 }
 export default connect(mapStateToProps)(SignUpCont);

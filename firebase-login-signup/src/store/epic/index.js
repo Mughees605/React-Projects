@@ -5,14 +5,16 @@ import firebase from "../../firebase";
 export class LoginEpic {
 
     static login = (action$) => action$
-        .ofType(LoginAction.LOGIN)
+        .ofType(LoginAction)
         .switchMap(({payload}) => {
+            console.log(payload,"cont")
             return Observable
                 .fromPromise(firebase.auth().signInWithEmailAndPassword(payload.email, payload.password))
                 .map((user)=>{
-                    return {type:LoginAction.LOGIN_SUCCESS, payload:user}
+                    return Observable.of({type:LoginAction.LOGIN_SUCCESS, payload:user});
                 }).catch((err)=>{
                     return {type:LoginAction.LOGIN_UN_SUCCESS,payload:err}
                 })
         })
+
 }

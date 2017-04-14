@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //component start
 import Main from "./components/main.js";
-import Login from "./components/login.js";
-import SignUp from "./components/signup.js";
-import DashBoard from "./components/dashboard.js"
+import LoginCont from "./container/login.js";
+import SignUpCont from "./container/signup.js";
+import DashboardCont from "./container/dashboard.js"
 //component end
 import {Provider} from "react-redux";
 import {store} from "./store/store.js"
@@ -19,10 +19,10 @@ ReactDOM.render(
   <MuiThemeProvider>
     <Router history={hashHistory}>
       <Route component={Main} path="/">
-        <IndexRoute component={Login}/>
-        <Route path="signup" component={SignUp}/>
+        <IndexRoute component={LoginCont}/>
+        <Route path="signup" component={SignUpCont}/>
       </Route>
-      <Route path="dashboard" component={DashBoard}></Route>
+      <Route path="/dashboard" component={DashboardCont}></Route>
     </Router>
   </MuiThemeProvider>
 </Provider>, document.getElementById('root'));
