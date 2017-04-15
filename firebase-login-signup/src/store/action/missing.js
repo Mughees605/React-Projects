@@ -49,12 +49,14 @@ export class MissingAction {
                 .ref(`pictures/${file.name}`);
             const task = storageRef.put(file);
             task.on("state_changed", (snapshot) => {
-             percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+                percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+                dispatch(MissingAction.missingImageDone({percentage: percentage}))
+
             }, (err) => {
                 console.log(err)
             }, () => {
                 //success
-                dispatch(MissingAction.missingImageDone({photo:task.snapshot.downloadURL,percentage:percentage}))
+                dispatch(MissingAction.missingImageDone({photo: task.snapshot.downloadURL, percentage: percentage}))
                 console.log(task.snapshot.downloadURL, "donload")
             })
 

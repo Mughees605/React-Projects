@@ -50,7 +50,8 @@ class DashBoard extends Component {
                             onChange={this.handleChange.bind(this)}
                             fullWidth={true}/>
                         <br/>
-                        <progress></progress>
+                        {console.log(this.props.per)}
+                        <progress value={this.props.per} max='100'></progress>
                         <RaisedButton
                             type="submit"
                             onClick={this.handleMissingData.bind(this)}

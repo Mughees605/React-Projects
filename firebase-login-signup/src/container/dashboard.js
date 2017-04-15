@@ -7,7 +7,8 @@ import {hashHistory} from "react-router";
 function mapStateToProps(state) {
     return {
         isLogin: state.LoginReducer.isLogin,
-        url:state.MissingReducer.photoURL.photo
+        url:state.MissingReducer.photoURL.photo,
+        percentage:state.MissingReducer.photoURL.percentage
     }
 }
 
@@ -30,7 +31,7 @@ class DashboardCont extends Component {
        
         return (
             <div>
-                <Dashboard onAdd = {this.handleMissingPerson.bind(this)} onImage={this.handleMissingImage.bind(this)} photo={this.props.url}/>
+                <Dashboard onAdd = {this.handleMissingPerson.bind(this)} onImage={this.handleMissingImage.bind(this)} photo={this.props.url} per={this.props.percentage}/>
             </div>
         )
     }
