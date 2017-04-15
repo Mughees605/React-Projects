@@ -16,6 +16,7 @@ class DashBoard extends Component {
         userObj.name = this.refs.name.getValue();
         userObj.age = this.refs.age.getValue();
         userObj.address = this.refs.address.getValue();
+        userObj.image = this.props.photo;
         this.props.onAdd(userObj);
     }
     handleChange(e){

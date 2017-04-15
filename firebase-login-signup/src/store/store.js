@@ -3,12 +3,12 @@ import {combineEpics, createEpicMiddleware} from 'redux-observable';
 import thunk from "redux-thunk";
 import {createLogger} from "redux-logger"
 import {SignUpReducer, LoginReducer} from "./reducer"
-
+import {MissingReducer} from "./reducer/missing.js"
 import {LoginEpic} from "./epic"
 const logger = createLogger();
 
 const rootEpic = combineEpics(LoginEpic.login)
-const rootReducer = combineReducers({LoginReducer, SignUpReducer})
+const rootReducer = combineReducers({LoginReducer, SignUpReducer,MissingReducer})
 
 const epicMiddleware = createEpicMiddleware(rootEpic);
 

@@ -5,7 +5,10 @@ import {MissingAction} from "../store/action/missing";
 import {hashHistory} from "react-router";
 
 function mapStateToProps(state) {
-    return {isLogin: state.LoginReducer.isLogin}
+    return {
+        isLogin: state.LoginReducer.isLogin,
+        url:state.MissingReducer.photoURL.photo
+    }
 }
 
 class DashboardCont extends Component {
@@ -27,7 +30,7 @@ class DashboardCont extends Component {
        
         return (
             <div>
-                <Dashboard onAdd = {this.handleMissingPerson.bind(this)} onImage={this.handleMissingImage.bind(this)}/>
+                <Dashboard onAdd = {this.handleMissingPerson.bind(this)} onImage={this.handleMissingImage.bind(this)} photo={this.props.url}/>
             </div>
         )
     }
