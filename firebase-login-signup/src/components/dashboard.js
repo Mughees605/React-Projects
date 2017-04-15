@@ -18,8 +18,8 @@ class DashBoard extends Component {
         userObj.address = this.refs.address.getValue();
         this.props.onAdd(userObj);
     }
-    handleChange(event){
-        this.props.onImage(event.target.files[0]);
+    handleChange(e){
+        this.props.onImage(e);
     }
     
     render() {
