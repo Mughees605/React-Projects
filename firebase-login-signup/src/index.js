@@ -9,6 +9,8 @@ import DashboardCont from "./container/dashboard.js"
 import {Provider} from "react-redux";
 import {store} from "./store/store.js"
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 injectTapEventPlugin();
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Router, Route, IndexRoute, hashHistory} from "react-router";
@@ -16,7 +18,7 @@ import {Router, Route, IndexRoute, hashHistory} from "react-router";
 ReactDOM.render(
 
   <Provider store={store}>
-  <MuiThemeProvider>
+  <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
     <Router history={hashHistory}>
       <Route component={Main} path="/">
         <IndexRoute component={LoginCont}/>
