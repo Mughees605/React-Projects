@@ -31,9 +31,9 @@ ReactDOM.render(
         <Route path="signup" component={SignUpCont}/>
       </Route>
       <Route path="/dashboard" component={DashboardCont}>
-      <Route path="missing" component={MissingPersonCont}/>
-      <Route path="crime" component={CrimeCont}/>
-      <Route path="reports" component={ReportsCont}/>
+        <Route path="missing" component={MissingPersonCont}/>
+        <Route path="crime" component={CrimeCont}/>
+        <Route path="reports" component={ReportsCont}/>
       </Route>
     </Router>
   </MuiThemeProvider>

@@ -12,7 +12,7 @@ import {
 class Reports extends React.Component {
     render() {
         return (
-            <div>Reports
+            <div>
                 <Table>
                     <TableHeader displayRowCheckbox={false}>
                         <TableRow>

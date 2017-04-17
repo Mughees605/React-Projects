@@ -10,14 +10,14 @@ function mapStateToProps(state) {
 }
 
 class DashboardCont extends Component {
-    // componentWillMount(){
-    //     if(!this.props.isLogin){
-    //         hashHistory.push("/");
-    //     }
-    //     else{
-    //         hashHistory.push("/dashboard");
-    //     }
-    // }
+    componentWillMount(){
+        if(!this.props.isLogin){
+            hashHistory.push("/");
+        }
+        else{
+            hashHistory.push("/dashboard");
+        }
+    }
     render() {
        
         return (
