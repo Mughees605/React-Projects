@@ -23,4 +23,4 @@ class Main extends Component {
         )
     }
 }
-export default connect()(Main);
+export default Main;
