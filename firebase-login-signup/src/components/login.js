@@ -24,7 +24,7 @@ class Login extends Component {
             <div
                 style={{
                 width: "400px",
-                margin: "20px auto",
+                margin: "0px auto",
                 textAlign: "center"
             }}>
                 <Paper zDepth={3}>

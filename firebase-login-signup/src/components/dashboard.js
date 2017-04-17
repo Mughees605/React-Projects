@@ -1,67 +1,40 @@
 import React, { Component } from "react"
-import { FlatButton, AppBar, IconButton, TextField, Paper, RaisedButton } from "material-ui";
-const App = () => (
-    <AppBar
-        title={<span>DashBoard</span>}
-        iconElementRight={<span><FlatButton label="SignUp" /> <FlatButton label="Login" /></span>}
-    />
-);
+import { Drawer, MenuItem, AppBar } from 'material-ui';
+import { Link } from "react-router";
 class DashBoard extends Component {
+
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = { open: false };
     }
 
-    handleMissingData() {
-        var userObj = {};
-        userObj.name = this.refs.name.getValue();
-        userObj.age = this.refs.age.getValue();
-        userObj.address = this.refs.address.getValue();
-        userObj.image = this.props.photo;
-        this.props.onAdd(userObj);
-    }
-    handleChange(e) {
-        this.props.onImage(e);
-    }
+    handleToggle = () => this.setState({ open: !this.state.open });
 
+    handleClose = () => this.setState({ open: false });
     render() {
         return (
-            <div>
-                <AppBar />
-                <div style={{ width: "400px", margin: "0px auto", textAlign: "center" , }}>
-                    <h1>Missing Reports</h1>
-                    <Paper zDepth={3}>
-                        <div style={{padding:"20px", borderRadius:"2px", margin:"10px"}}>
-                            <TextField floatingLabelText="Type missing person name" ref="name" fullWidth={true} />
-                            <br />
-                            <TextField
-                                floatingLabelText="type missing person age"
-                                ref="age"
-                                type="number"
-                                fullWidth={true} />
-                            <br />
-                            <TextField
-                                floatingLabelText="Address"
-                                ref="address"
-                                fullWidth={true} />
-                            <br />
-                            <TextField
-                                ref="pic"
-                                type="file"
-                                onChange={this.handleChange.bind(this)}
-                                fullWidth={true} />
-                            <br />
-                            {console.log(this.props.per)}
-                            <progress value={this.props.per} max='100'></progress>
-                            <RaisedButton
-                                type="submit"
-                                onClick={this.handleMissingData.bind(this)}
-                                fullWidth={true}
-                            >Submit Report</RaisedButton>
-                        </div>
-                    </Paper>
-                </div>
+            <div style={{ margin: "0px" }}>
+                <AppBar
+                    title="Crime report app"
+                    iconClassNameRight="muidocs-icon-navigation-expand-more"
+                    onTouchTap={this.handleToggle}
+                />
+                <Drawer
+                    containerStyle={{ height: 'calc(100% - 64px)', top: 75 }}
+                    docked={true}
+                    width={200}
+                    open={this.state.open}
+                    onRequestChange={(open) => this.setState({ open })
+                    }
+                >
+                    <Link to="/dashboard/missing"><MenuItem onTouchTap={this.handleClose}>Menu Item</MenuItem>
+                    </Link>
+                     <Link to="/"><MenuItem>Go to main</MenuItem>
+                    </Link>
+                </Drawer>
+                {this.props.children}
 
-            </div>
+            </div >
         )
     }
 }

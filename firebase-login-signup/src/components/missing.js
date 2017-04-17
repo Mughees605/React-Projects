@@ -1,4 +1,5 @@
 import React,{Component} from "react";
+import { FlatButton, AppBar, IconButton, TextField, Paper, RaisedButton } from "material-ui";
 
 class Missing extends Component {
     constructor(props) {
@@ -20,7 +21,6 @@ class Missing extends Component {
     render() {
         return (
             <div>
-                <AppBar />
                 <div style={{ width: "400px", margin: "0px auto", textAlign: "center" , }}>
                     <h1>Missing Reports</h1>
                     <Paper zDepth={3}>

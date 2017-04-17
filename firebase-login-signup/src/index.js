@@ -5,6 +5,7 @@ import Main from "./components/main.js";
 import LoginCont from "./container/login.js";
 import SignUpCont from "./container/signup.js";
 import DashboardCont from "./container/dashboard.js"
+import MissingPersonCont from "./container/missing.js"
 //component end
 import {Provider} from "react-redux";
 import {store} from "./store/store.js"
@@ -24,7 +25,9 @@ ReactDOM.render(
         <IndexRoute component={LoginCont}/>
         <Route path="signup" component={SignUpCont}/>
       </Route>
-      <Route path="/dashboard" component={DashboardCont}></Route>
+      <Route path="/dashboard" component={DashboardCont}>
+      <Route path="missing" component={MissingPersonCont}/>
+      </Route>
     </Router>
   </MuiThemeProvider>
 </Provider>, document.getElementById('root'));
