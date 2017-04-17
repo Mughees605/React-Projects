@@ -1,21 +1,17 @@
 import React,{Component} from "react";
 import { FlatButton, AppBar, IconButton, TextField, Paper, RaisedButton } from "material-ui";
 
-class Missing extends Component {
+class Crime extends Component {
     constructor(props) {
         super(props)
     }
 
-    handleMissingData() {
+    handleCrimeData() {
         var userObj = {};
         userObj.name = this.refs.name.getValue();
         userObj.age = this.refs.age.getValue();
         userObj.address = this.refs.address.getValue();
-        userObj.image = this.props.photo;
         this.props.onAdd(userObj);
-    }
-    handleChange(e) {
-        this.props.onImage(e);
     }
 
     render() {
@@ -37,17 +33,9 @@ class Missing extends Component {
                                 ref="address"
                                 fullWidth={true} />
                             <br />
-                            <TextField
-                                ref="pic"
-                                type="file"
-                                onChange={this.handleChange.bind(this)}
-                                fullWidth={true} />
-                            <br />
-                            {console.log(this.props.per)}
-                            <progress value={this.props.per} max='100'></progress>
                             <RaisedButton
                                 type="submit"
-                                onClick={this.handleMissingData.bind(this)}
+                                onClick={this.handleCrimeData.bind(this)}
                                 fullWidth={true}
                             >Submit Report</RaisedButton>
                         </div>
@@ -56,4 +44,4 @@ class Missing extends Component {
         )
     }
 }
-export default Missing;
+export default Crime;

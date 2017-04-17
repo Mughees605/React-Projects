@@ -27,13 +27,14 @@ class DashBoard extends Component {
                     onRequestChange={(open) => this.setState({ open })
                     }
                 >
-                    <Link to="/dashboard/missing"><MenuItem onTouchTap={this.handleClose}>Menu Item</MenuItem>
+                    <Link to="/dashboard/missing"><MenuItem onTouchTap={this.handleClose}>Missing Reports</MenuItem>
+                    </Link>
+                    <Link to="/dashboard/crime"><MenuItem onTouchTap={this.handleClose}>Crime Reports</MenuItem>
                     </Link>
                      <Link to="/"><MenuItem>Go to main</MenuItem>
+
                     </Link>
                 </Drawer>
-                {this.props.children}
-
             </div >
         )
     }

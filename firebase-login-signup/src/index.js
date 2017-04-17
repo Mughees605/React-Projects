@@ -6,6 +6,7 @@ import LoginCont from "./container/login.js";
 import SignUpCont from "./container/signup.js";
 import DashboardCont from "./container/dashboard.js"
 import MissingPersonCont from "./container/missing.js"
+import CrimeCont from "./container/crime.js"
 //component end
 import {Provider} from "react-redux";
 import {store} from "./store/store.js"
@@ -27,6 +28,7 @@ ReactDOM.render(
       </Route>
       <Route path="/dashboard" component={DashboardCont}>
       <Route path="missing" component={MissingPersonCont}/>
+      <Route path="crime" component={CrimeCont}/>
       </Route>
     </Router>
   </MuiThemeProvider>
