@@ -1,5 +1,5 @@
 
-export default class CounterAction {
+export class CounterAction {
 
     static INCREMENT = "INCREMENT";
     static DECREMENT = "DECREMENT";
@@ -9,9 +9,10 @@ export default class CounterAction {
             type: CounterAction.INCREMENT
         }
     }
-    static Decrement = () => {
+    static Decrement = (number) => {
         return {
-            type: CounterAction.DECREMENT
+            type: CounterAction.DECREMENT,
+            payload:number
         }
     }
     static incrementAsync = ()=>{
