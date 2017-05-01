@@ -19,9 +19,12 @@
   outline: none;
   border: none;
 }
-.editor-container h2{
+.editor-container .title-container h2{
   color: #8dc73f;
   font-family: 'Source Sans Pro', sans-serif;
+}
+.editor-container .title-container span{
+  margin: 3px;
 }
 .editor-container .title-container  .nameTitle{
   font-family: 'Source Sans Pro', sans-serif;
@@ -173,7 +176,7 @@
 .editor-container .second-col .lists button{
   width: 75px;
   height: 30px;
-  margin-top: 12px;
+  margin-top: 18px;
   border-radius: 5px;
   background-color: #8dc73f;
   font-family: 'Source Sans Pro', sans-serif;
@@ -181,4 +184,10 @@
   font-weight: bold;
   text-align: center;
   color: #ffffff;
+  outline: none;
 }
+/*@media only screen and (max-width:1168px){
+  .editor-container .second-col{
+    width:300px;
+  }
+}*/

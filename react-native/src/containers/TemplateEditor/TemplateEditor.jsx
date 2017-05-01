@@ -1,9 +1,8 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import "./TemplateEditor.css";
-import {Col, Panel, Row, FormGroup, FormControl} from "react-bootstrap";
+import { Col, Panel, Row, FormGroup, FormControl } from "react-bootstrap";
 
-// import {Editor} from "react-draft-wysiwyg" import
-// 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import Editor from "./Editor.jsx"
 const Variables = [
     {
         name: "{{first_name}}",
@@ -30,9 +29,10 @@ class TemplateEditor extends Component {
     render() {
         return (
             <div className="editor-container">
-                <div className="title-container">
+               <Row>
+                    <div className="title-container">
                     <h2>
-                        <span>Templates
+                        <span>Templates<span />
                             <i className="fa fa-caret-right icon" aria-hidden="true"></i>
                         </span>
                         <span className="nameTitle">
@@ -42,14 +42,16 @@ class TemplateEditor extends Component {
                         <button className="btn  pull-right">New template</button>
                     </Col>
                 </div>
+               </Row>
                 <Row>
                     {/*first coloumn start*/}
-                    <Col md={8} className="first-col">
+              <Col lg={12}>
+                    <Col lg={8} className="first-col">
                         <div className="first-col-head">
                             <h1 className='template-editor'>TemplateEditor</h1>
                         </div>
                         <Panel className="panel">
-                            <Col md={10} mdOffset={1}>
+                            <Col md={11} mdOffset={1}>
                                 <h3 className='title'>Select template</h3>
                                 <FormGroup controlId="formControlsSelect">
                                     <FormControl className='dropdown' componentClass="select" placeholder="select">
@@ -65,35 +67,37 @@ class TemplateEditor extends Component {
                                     <FormControl
                                         className='subject-editor'
                                         type="text"
-                                        placeholder="Hi {{first_name}}, I want to help {{company_name}} launch your mobile app"/>
+                                        placeholder="Hi {{first_name}}, I want to help {{company_name}} launch your mobile app" />
                                 </FormGroup>
                                 <h3 className='title'>Content:</h3>
 
                                 {/*Editor*/}
                                 <div
                                     style={{
-                                    backgroundColor: "#fff"
-                                }}></div>
+                                        backgroundColor: "#fff"
+                                    }}>
+                                    <Editor placeholder="" />
+                                </div>
                                 {/*Editor End*/}
 
                                 <div className="btn-group">
                                     <button
                                         className="btn pull-right save"
                                         style={{
-                                        borderRadius: "5px"
-                                    }}>Save</button>
+                                            borderRadius: "5px"
+                                        }}>Save</button>
                                     <button
                                         className="btn pull-right"
                                         style={{
-                                        borderRadius: "5px"
-                                    }}>Cancel</button>
+                                            borderRadius: "5px"
+                                        }}>Cancel</button>
                                 </div>
                             </Col>
                         </Panel>
                     </Col>
                     {/*first coloumn end*/}
 
-                    <Col md={4} className="second-col">
+                    <Col lg={4} className="second-col">
                         <div className="second-col-head">
                             <h1 className='template-editor'>Variables</h1>
                         </div>
@@ -113,21 +117,24 @@ class TemplateEditor extends Component {
                                         return (
                                             <div className="lists" key={i}>
                                                 <button className="btn btn-default pull-right">Insert</button>
-                                                <div  style={{
-                                                        margin: '10px'
-                                                    }} >
-                                                    <p>{val.name}</p>
+                                                <div style={{
+                                                    margin: '10px'
+                                                }} >
+                                                    <span>{val.name}</span>
+                                                    <br/>
                                                     <span
                                                         className='list-name'
-                                                       >{val.text}</span>
+                                                    >{val.text}</span>
                                                 </div>
                                             </div>
                                         )
                                     })}
                                 </Col>
                             </Col>
+                           
                         </Panel>
                     </Col>
+                  </Col>
                 </Row>
             </div>
         )
