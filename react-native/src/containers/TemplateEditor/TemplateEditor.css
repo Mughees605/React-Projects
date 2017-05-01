@@ -38,7 +38,7 @@
   font-size: 21px;
 }
 .editor-container{
-    width:"100%"
+    width:100%;
 }
 .editor-container .first-col .first-col-head{
  /*width: 522px;*/
@@ -186,8 +186,13 @@
   color: #ffffff;
   outline: none;
 }
-/*@media only screen and (max-width:1168px){
-  .editor-container .second-col{
-    width:300px;
+@media only screen and (max-width:1270px){
+  .editor-container .first-col{
+    width:100%;
+    display: block;
   }
-}*/
+  .editor-container .second-col{
+    width:100%;
+    display: block;
+  }
+}

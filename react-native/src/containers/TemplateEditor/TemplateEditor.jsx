@@ -29,23 +29,22 @@ class TemplateEditor extends Component {
     render() {
         return (
             <div className="editor-container">
-               <Row>
+                <Row>
                     <div className="title-container">
-                    <h2>
-                        <span>Templates<span />
-                            <i className="fa fa-caret-right icon" aria-hidden="true"></i>
-                        </span>
-                        <span className="nameTitle">
-                            Intro Email</span>
-                    </h2>
-                    <Col md={12} offset={12}>
-                        <button className="btn  pull-right">New template</button>
-                    </Col>
-                </div>
-               </Row>
+                        <h2>
+                            <span>Templates<span />
+                                <i className="fa fa-caret-right icon" aria-hidden="true"></i>
+                            </span>
+                            <span className="nameTitle">
+                                Intro Email</span>
+                        </h2>
+                        <Col md={12} offset={12}>
+                            <button className="btn  pull-right">New template</button>
+                        </Col>
+                    </div>
+                </Row>
                 <Row>
                     {/*first coloumn start*/}
-              <Col lg={12}>
                     <Col lg={8} className="first-col">
                         <div className="first-col-head">
                             <h1 className='template-editor'>TemplateEditor</h1>
@@ -121,7 +120,7 @@ class TemplateEditor extends Component {
                                                     margin: '10px'
                                                 }} >
                                                     <span>{val.name}</span>
-                                                    <br/>
+                                                    <br />
                                                     <span
                                                         className='list-name'
                                                     >{val.text}</span>
@@ -131,10 +130,10 @@ class TemplateEditor extends Component {
                                     })}
                                 </Col>
                             </Col>
-                           
+
                         </Panel>
                     </Col>
-                  </Col>
+
                 </Row>
             </div>
         )
