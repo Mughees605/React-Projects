@@ -9,7 +9,7 @@ class Dashboard extends Component {
                 <NavHeader />
                 <div className="sidemenu-container container">
                     <SideMenu />
-                    <div  style={{ height: '100%', backgroundColor: "#ededed"}} className="col-md-10 col-xs-8 col-sm-8">
+                    <div  style={{ height: '100vh' }} className="col-md-10 col-xs-8 col-sm-8">
                         {this.props.children ? React.cloneElement(this.props.children, { ...this.props }) : this.props.children}
                     </div>
                 </div>

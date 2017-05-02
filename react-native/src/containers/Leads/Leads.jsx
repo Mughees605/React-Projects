@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Panel, Row, Col } from 'react-bootstrap';
+import { browserHistory } from 'react-router';
 import './Leads.css';
 
 class Leads extends Component {
@@ -37,7 +38,7 @@ class Leads extends Component {
     var jobCards = (
       this.state.jobList.map(function (jobObj, key) {
         return (
-          <Panel key={key} >
+          <Panel key={key} onClick={() => browserHistory.push('/dashboard/leads/'+key)}>
             <Row className="show-grid">
               <Col xs={12} md={10} sm={9}>
                 <Col xs={4} md={2} sm={3}>

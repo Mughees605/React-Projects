@@ -1,0 +1,72 @@
+.sales-steps .header {
+  border-radius: 5px;
+}
+
+.sales-steps .btns {
+  margin-right: 10px;
+  width: 115px;
+  height: 42px;
+  margin-bottom: 5px;
+}
+.sales-steps .thumbnail-img{
+    margin-left: -5px;
+    height: 100px;
+}
+.sales-steps .green-text{
+    color: #8dc73f
+}
+
+.sales-steps .green-bg{
+    background-color: #8dc73f
+}
+
+.sales-steps .name {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  color: #8dc73f;
+
+}
+.sales-steps .title {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: left;
+  color: #6b6969;
+  margin-top: -5px;
+}
+
+.sales-steps .action-btn-group .contact-btn{
+  background-color: #aeaeae;
+  color: white;
+}
+.sales-steps .action-btn-group .contact-btn-green{
+  background-color: #8dc73f;
+  color: white;
+}
+
+.sales-steps .Line {
+    width: 2px;
+    height: 30px;
+    border: solid 2px #eaeaea;
+    display: inline-block;
+    margin-left: 15px;
+    position: relative;
+    top: 10px;
+    margin-right: 23px;
+}
+@media (max-width: 1200px){
+     .sales-steps .Line {
+        display: none;
+    }
+}
+.sales-steps .sales-Steps-title {
+  height: 32px;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: left;
+  color: #2b345b;
+}
+.sales-steps .title-container{
+  padding-top: 15px;
+  padding-bottom: 17px;
+}

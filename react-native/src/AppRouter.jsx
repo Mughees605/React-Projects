@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
-import { App, Dashboard , Leads, SalesSteps, LeadsLists, Templates ,LeadDetails,TemplateEditor } from './containers'
+import { App, Dashboard , Leads, SalesSteps, LeadsLists, Templates ,LeadDetails } from './containers'
 
 
 class AppRouter extends Component {
@@ -17,7 +17,6 @@ class AppRouter extends Component {
                   <Route path="salesSteps" component={SalesSteps} />
                   <Route path="leadsLists" component={LeadsLists} />
                   <Route path="templates" component={Templates} />
-                  <Route path="templateEditor" component={TemplateEditor}></Route>
               </Route>
             </Route>
         </Router>
