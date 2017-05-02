@@ -126,8 +126,9 @@ class TemplateEditor extends Component {
                                                     <span
                                                         className='list-name'
                                                     >{val.text}</span>
-                                                </div>
                                                  <button className="btn btn-default pull-right">Insert</button>
+                                                    
+                                                </div>
                                             </div>
                                         )
                                     })}

@@ -177,7 +177,7 @@
 .editor-container .second-col .lists button{
   width: 75px;
   height: 30px;
-  margin-top: 18px;
+  margin-top: -5px;
   border-radius: 5px;
   background-color: #8dc73f;
   font-family: 'Source Sans Pro', sans-serif;
@@ -208,6 +208,11 @@
 @media only screen and (max-width:660px){
   .editor-container .title-container span,.editor-container .title-container .nameTitle{
    text-align: center;
+  }
+}
+@media only screen and (max-width:660px){
+  .editor-container .second-col .lists{
+    height: 120px;
   }
 }
 
