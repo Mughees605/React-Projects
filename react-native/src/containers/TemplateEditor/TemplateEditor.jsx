@@ -75,17 +75,19 @@ class TemplateEditor extends Component {
                                     style={{
                                         backgroundColor: "#fff"
                                     }}>
-                                    <Editor placeholder="" />
+                                    <Editor />
                                 </div>
                                 {/*Editor End*/}
 
                                 <div className="btn-group">
                                     <button
+
                                         className="btn pull-right save"
                                         style={{
                                             borderRadius: "5px"
                                         }}>Save</button>
                                     <button
+
                                         className="btn pull-right"
                                         style={{
                                             borderRadius: "5px"
@@ -115,7 +117,7 @@ class TemplateEditor extends Component {
                                     {Variables.map((val, i) => {
                                         return (
                                             <div className="lists" key={i}>
-                                                <button className="btn btn-default pull-right">Insert</button>
+                                               
                                                 <div style={{
                                                     margin: '10px'
                                                 }} >
@@ -125,6 +127,7 @@ class TemplateEditor extends Component {
                                                         className='list-name'
                                                     >{val.text}</span>
                                                 </div>
+                                                 <button className="btn btn-default pull-right">Insert</button>
                                             </div>
                                         )
                                     })}
