@@ -1,0 +1,100 @@
+// Header
+.header-title {
+  @include fonts(45px, 500, $font-primary-color);
+  font-family: $font-secondary-family;
+  margin-bottom: 20px;
+  line-height: 60px;
+}
+
+.header-sub-title {
+  @include fonts(24px, 100, $font-primary-color);
+  margin-top: 0px;
+  margin-bottom: 50px;
+  line-height: 1.4em;
+}
+
+.header-feature-title {
+  @include fonts(14px, 500, $font-default-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0px;
+}
+
+.header-feature-message {
+  @include fonts(16px, 400, $font-default-color);
+  opacity: 0.5;
+  padding: 0px 38px;
+  line-height: 28px;
+  margin-top: 5px;
+}
+
+// Benefits
+.benefit-title {
+  font-family: $font-secondary-family;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: $font-default-color;
+  letter-spacing: 0;
+  font-weight: 100;
+  line-height: 50px;
+}
+
+// Features
+.feature-title {
+  font-family: $font-secondary-family;
+  font-size: 30px;
+  font-weight: 300;
+  color: $font-default-color;
+  margin-bottom: 0px;
+}
+
+.feature-sub-title {
+  font-family: $font-secondary-family;
+  font-size: 30px;
+  font-weight: 700;
+  color: $font-default-color;
+  margin-top: 7px;
+  margin-bottom: 15px;
+}
+
+// Application
+.application-title {
+  @include fonts(45px, 700, $font-default-color);
+  font-family: $font-secondary-family;
+  line-height: 60px;
+  margin-bottom: 10px;
+  font-weight: 100;
+}
+
+.application-sub-title {
+  font-family: $font-primary-family;
+  font-size: 22px;
+  font-weight: 400;
+  color: $font-default-color;
+  opacity: 0.5;
+  margin-top: 0px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-bottom: 35px;
+}
+
+// CTA
+.cta-title {
+  @include fonts(45px, 600, $font-primary-color);
+  font-family: $font-secondary-family;
+  font-weight: 500;
+  line-height: 60px;
+  margin-top: 3px;
+  margin-bottom: 0px;
+}
+
+.cta-sub-title {
+  font-family: $font-secondary-family;
+  font-size: 17px;
+  font-weight: 400;
+  color: $font-primary-color;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}

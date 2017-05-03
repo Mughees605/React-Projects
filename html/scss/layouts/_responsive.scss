@@ -1,0 +1,302 @@
+/* Desktop */
+@media only screen and (min-width: $desktop-small) and (max-width: $desktop-large) {
+
+}
+/* Tablets: 974px 768px */
+@media only screen and (min-width: $tablet-small) and (max-width: $tablet-large) {
+  .benefits-container {
+    width: 100%;
+  }
+
+  .features-content {
+    width: 100%;
+  }
+
+  .application-content {
+    padding: 0px 30px;
+  }
+
+  .desktop-device-pic {
+    width: 100%;
+  }
+}
+/* Phones: 767px 480px */
+@media only screen and (min-width: $phone-small) and (max-width: $phone-large) {
+  .logo {
+    margin-left: -30px;
+  }
+
+  .header {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .header-title {
+    font-size: 38px;
+    line-height: 47px;
+  }
+
+  .header-sub-title {
+    font-size: 25px;
+    line-height: 33px;
+  }
+
+  .benefits {
+    padding: 0px 30px;
+  }
+
+  .benefits-container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .header-feature-message {
+    font-size: 17px;
+    padding: 0px 100px;
+  }
+
+  .signup-wizard {
+    padding: 10px 0px 10px 0px;
+
+    .step-sub-title {
+      font-size: 12px;
+    }
+
+    .step-divider {
+      width: 65px;
+    }
+  } 
+
+  .form-container {
+    padding: 0px 15px 50px 15px;
+  }
+
+  .payment-container {
+    .reason-column {
+      flex-direction: column;
+
+      .reason-container {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .feature-row {
+    padding: 0px 30px;
+  }
+
+  .features-content {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 0px;
+    padding-bottom: 62px;
+  }
+
+  .feature-title {
+    font-size: 27px;
+  }
+
+  .feature-sub-title {
+    font-size: 27px;
+  }
+
+  .feature-message {
+    margin-top: -82px;
+    order: 1;
+  }
+
+  .pad {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .application {
+    flex-basis: 655px; 
+  }
+
+  .application-title {
+    font-size: 36px;
+    padding: 0px 20px;
+  }
+
+  .application-sub-title {
+    font-size: 24px;
+    padding: 0px 20px;
+  }
+
+  .desktop-device-pic {
+    display: none;
+  }
+
+  .mobile-device-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-title {
+    font-size: 41px;
+  }
+
+  .logo-footer-column {
+    padding-left: 0px;
+
+    img {
+      margin-left: -28px;
+    }
+  }
+
+  .inline-links {
+    padding-left: 0px;
+  }
+}
+/* Custom device: 479px 320px */
+@media only screen and (min-width: $custom-small) and (max-width: $custom-large) {
+  .logo {
+    margin-left: -62px;
+  }
+
+  .header {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .header-title {
+    font-size: 34px;
+    line-height: 43px;
+  }
+
+  .header-sub-title {
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  .benefits {
+    padding: 0px 30px;
+  }
+
+  .benefits-container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .benefit-title {
+    font-size: 27px;
+    margin-top: 50px;
+  }
+
+  .header-feature-message {
+    font-size: 17px;
+    padding: 0px 30px;
+  }
+
+  .signup-wizard {
+    padding: 10px 0px 10px 0px;
+    
+    .step-sub-title {
+      font-size: 12px;
+    }
+
+    .step-divider {
+      display: none;
+    }
+  }
+
+  .form-container {
+    padding: 0px 15px 50px 15px;
+  }
+
+  .payment-container {
+    .reason-column {
+      flex-direction: column;
+
+      .reason-container {
+        padding-bottom: 20px;
+      }
+
+      .left-section {
+        padding-right: 0px; 
+      }
+    }
+  }
+
+  .buy-membership {
+    font-size: 15px;
+  }
+
+  .feature-row {
+    padding: 0px 30px;
+  }
+
+  .features-content {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 0px;
+    padding-bottom: 62px;
+  }
+
+  .feature-title {
+    font-size: 27px;
+  }
+
+  .feature-sub-title {
+    font-size: 27px;
+  }
+
+  .feature-message {
+    margin-top: -82px;
+    order: 1;
+  }
+
+  .pad {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .application {
+   flex-basis: 655px; 
+  }
+
+  .application-title {
+    font-size: 36px;
+    line-height: 40px;
+    padding: 0px 10px 20px;
+  }
+
+  .application-sub-title {
+    font-size: 24px;
+    padding: 0px 20px;
+  }
+
+  .desktop-device-pic {
+    display: none;
+  }
+
+  .mobile-device-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-title {
+    font-size: 38px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-footer-column {
+    padding-left: 0px;
+
+    img {
+      margin-left: -28px;
+    }
+  }
+
+  .links-footer-column {
+    padding-top: 22px;
+  }
+}

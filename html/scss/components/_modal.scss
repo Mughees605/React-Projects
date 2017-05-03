@@ -1,0 +1,160 @@
+.modal-header {
+  padding: 10px;
+  box-shadow: 0 5px 2px 0 rgba(0,0,0,0);
+
+  .close {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+  }
+}
+
+.modal-body {
+  font-family: $font-secondary-family;
+  font-size: 14px;
+  text-align: left;
+  border-radius: 6px;
+  background-color: #fafafa;
+  padding: 45px 25px;
+}
+
+.modal-footer {
+  border-radius: 6px;
+  background-color: #fafafa; 
+}
+
+.signup-wizard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 10px 6px 10px 20px;
+
+  .step-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .step-title {
+    font-family: $font-secondary-family;
+    font-size: 9px;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 0.83px;
+    margin: 0px;
+  }
+
+  .step-sub-title {
+    font-family: $font-secondary-family;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    letter-spacing: 0;
+    line-height: 30px;
+  }
+
+  .step-divider {
+    width: 150px;
+    margin: 0px 10px;
+
+    hr {
+      border-top: 1px solid #E6E6E6;
+    }
+  }
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $font-primary-color;
+  border: 3px solid #e6e6e6;   
+  width: 55px; 
+  height: 55px;
+  margin-right: 15px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+.active-step {
+  border-color: $primary-color;
+}
+
+.active-icon {
+  fill: $primary-color;
+}
+
+.payment-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  padding: 0px 27px;
+
+  .reason-column {
+    display: flex;
+
+    .left-section {
+      display: flex;
+      flex-direction: column;
+      padding-right: 57px;
+    }
+
+    .right-section {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .reason-container {
+      display: flex;
+
+      .right-column {
+        padding-left: 6px;
+
+        .reason-title {
+          font-size: 20px;
+          font-weight: 500;
+          color: $font-default-color;
+          letter-spacing: 0;
+          margin-top: 0px;
+          margin-bottom: 10px;
+        }
+        .reason-message {
+          font-size: 14px;
+          color: #666666;
+          letter-spacing: 0;
+          line-height: 23px;
+          margin-top: 0px;
+        }
+      }
+      
+      .left-column {
+        img {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .stripe-column {
+    text-align: center;
+    padding: 20px 0px 0px;
+
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      color: #8a8a8a;
+      margin: 25px 0px;
+      line-height: 28px;
+
+      i {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 715px;
+  }
+}

@@ -1,0 +1,10 @@
+body {
+  margin: 0px;
+  overflow-x: hidden;
+  font-family: $font-primary-family;
+}
+.main-container {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+}

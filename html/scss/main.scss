@@ -1,0 +1,24 @@
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+//Base
+@import "base/_variables.scss";
+@import "base/_base.scss";
+@import "base/_mixins.scss";
+@import "base/_inheritance.scss";
+
+//Components
+@import "components/_buttons.scss";
+@import "components/_form.scss";
+@import "components/_modal.scss";
+@import "components/_typography.scss";
+
+//Layouts
+@import "layouts/_header.scss";
+@import "layouts/_benefits.scss";
+@import "layouts/_features.scss";
+@import "layouts/_application.scss";
+@import "layouts/_cta.scss";
+@import "layouts/_terms.scss";
+@import "layouts/_footer.scss";
+@import "layouts/_responsive.scss";

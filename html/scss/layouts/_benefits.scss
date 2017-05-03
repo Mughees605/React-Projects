@@ -1,0 +1,26 @@
+.benefits {
+  display: flex;
+  flex-direction: column;
+  background-color: $footer-background-color;
+  text-align: center;
+  padding: 50px 0px 60px 0px;
+  order: 2;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.benefits-container {
+  display: flex;
+  justify-content: center;
+  width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: $font-secondary-family;
+
+  .column {
+    padding: 8px;
+
+    img {
+      margin-bottom: 20px;
+    }
+  }
+}
