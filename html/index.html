@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,67 +19,48 @@
 
 
     <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-40746609-2', 'auto');
-        ga('send', 'pageview');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-40746609-2', 'auto');
+      ga('send', 'pageview');
     </script>
 
     <!-- Facebook Pixel Code -->
     <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            }; if (!f._fbq) f._fbq = n;
-            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
-        }(window,
-            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1319272401502359'); // Insert your pixel ID here.
-        fbq('track', 'PageView');
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1319272401502359'); // Insert your pixel ID here.
+      fbq('track', 'PageView');
     </script>
     <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1319272401502359&ev=PageView&noscript=1"
-        />
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1319272401502359&ev=PageView&noscript=1"/>
     </noscript>
     <!-- DO NOT MODIFY -->
     <!-- End Facebook Pixel Code -->
 
     <!-- Drip -->
     <script type="text/javascript">
-        var _dcq = _dcq || [];
-        var _dcs = _dcs || {};
-        _dcs.account = '5306886';
-        (function () {
-            var dc = document.createElement('script');
-            dc.type = 'text/javascript'; dc.async = true;
-            dc.src = '//tag.getdrip.com/5306886.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(dc, s);
-        })();
-        function checkDrip() {
-            // alert("hello")
-            alert("hello")
-            var value = document.getElementById("text").value;
-            alert(value);
-            _dcq.push(["identify", {
-                email: "john@acme.com",
-                first_name: "John",
-                last_name: "Doe",
-                tags: ["the drop down value they selected", "successful_payment"]
-            }]);
-        }
+      var userFormDetails = {}; //global
+      var _dcq = _dcq || [];
+      var _dcs = _dcs || {};
+      _dcs.account = '5306886';
+      (function() {
+        var dc = document.createElement('script');
+        dc.type = 'text/javascript'; dc.async = true;
+        dc.src = 'https://tag.getdrip.com/5306886.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(dc, s);
+      })();
     </script>
-</head>
-
-<body>
+  </head>
+  <body>
     <div class="main-container">
-        <!--<section class="header-navbar">
+      <!--<section class="header-navbar">
         <div class="logo-header-column">
           <img src="img/logo-df.png" alt="">
         </div>
@@ -94,78 +74,75 @@
           </ul>
         </div>
       </section>-->
-        <header class="header">
-            <div class="value-proposition">
-                <img class="logo" src="img/logo/logo-header.svg" alt="Freelance slack logo">
-                <h1 class="header-title">The Top Community for Freelancers <br /> on Slack</h1>
-                <h3 class="header-sub-title">Join 1000+ other freelancers hanging out, sharing knowledge and <br /> discovering new opportunites.</h3>
-                <a class="cta-button button" href="#" data-toggle="modal" data-target="#joinModal" onclick="fbq('track', 'Lead')">Join Community Now</a>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="joinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <div class="signup-wizard">
-                                <div class="step-container">
-                                    <div class="circle first-step">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" version="1.1">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                <g class="user-icon" transform="translate(-173.000000, -64.000000)" fill="#E6E6E6">
-                                                    <g transform="translate(153.000000, 45.000000)">
-                                                        <path d="M31.2 30.2C34.3 30.2 36.8 27.7 36.8 24.6 36.8 21.5 34.3 19 31.2 19 28.1 19 25.6 21.5 25.6 24.6 25.6 27.7 28.1 30.2 31.2 30.2L31.2 30.2ZM30.5 33C27 33 20 34.6 20 37.7L20 40 41 40 41 37.7C41 34.6 34 33 30.5 33L30.5 33Z"
-                                                        />
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h3 class="step-title">First step</h3>
-                                        <span class="step-sub-title">Profile Info</span>
-                                    </div>
-                                </div>
-                                <div class="step-divider">
-                                    <hr>
-                                </div>
-                                <div class="step-container">
-                                    <div class="circle second-step">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" version="1.1">
-                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                <g class="card-icon" transform="translate(-582.000000, -67.000000)" fill="#E6E6E6">
-                                                    <g transform="translate(153.000000, 45.000000)">
-                                                        <g transform="translate(409.000000, 0.000000)">
-                                                            <g transform="translate(20.000000, 22.000000)">
-                                                                <path d="M18 0L2 0C0.9 0 0 0.9 0 2L0 14C0 15.1 0.9 16 2 16L18 16C19.1 16 20 15.1 20 14L20 2C20 0.9 19.1 0 18 0L18 0ZM18 14L2 14 2 8 18 8 18 14 18 14ZM18 4L2 4 2 2 18 2 18 4 18 4Z"
-                                                                />
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h3 class="step-title">Second step</h3>
-                                        <span class="step-sub-title">Payment Methods</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row hide" data-step="1" data-title="step one">
-                                <div class="form-container">
-                                    <form id="joinForm" method="get" action="">
-                                        <div class="header-error"><span></span></div>
-                                        <p><input class="input" type="text" id="firstname" name="firstname" placeholder="First Name"
-                                                value="" minlength="2" required></p>
-                                        <p><input class="input" type="text" id="lastname" name="lastname" placeholder="Last Name"
-                                                value="" minlength="2" required></p>
-                                        <p><input class="input" type="email" id="email" name="email" placeholder="E-mail" value=""
-                                                required></p>
-                                        <p>
-                                            <select class="select" id="occupation" name="occupation" required>
+      <header class="header">
+        <div class="value-proposition">
+          <img class="logo" src="img/logo/logo-header.svg" alt="Freelance slack logo">
+          <h1 class="header-title">The Top Community for Freelancers <br /> on Slack</h1>
+          <h3 class="header-sub-title">Join 1000+ other freelancers hanging out, sharing knowledge and <br /> discovering new opportunites.</h3>
+          <a class="cta-button button" href="#" data-toggle="modal" data-target="#joinModal" onclick="fbq('track', 'Lead')">Join Community Now</a>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="joinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <div class="signup-wizard">
+                    <div class="step-container">
+                      <div class="circle first-step">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" version="1.1">
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g class="user-icon" transform="translate(-173.000000, -64.000000)" fill="#E6E6E6">
+                              <g transform="translate(153.000000, 45.000000)">
+                                <path d="M31.2 30.2C34.3 30.2 36.8 27.7 36.8 24.6 36.8 21.5 34.3 19 31.2 19 28.1 19 25.6 21.5 25.6 24.6 25.6 27.7 28.1 30.2 31.2 30.2L31.2 30.2ZM30.5 33C27 33 20 34.6 20 37.7L20 40 41 40 41 37.7C41 34.6 34 33 30.5 33L30.5 33Z"/>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 class="step-title">First step</h3>
+                        <span class="step-sub-title">Profile Info</span>
+                      </div>
+                    </div>
+                    <div class="step-divider">
+                      <hr>
+                    </div>
+                    <div class="step-container">
+                      <div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;"><img src='https://secure.paymet.com/MerchantManager/img/loader.gif' width="64" height="64" /><br>Loading..</div>
+
+                      <div class="circle second-step">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" version="1.1">
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g class="card-icon" transform="translate(-582.000000, -67.000000)" fill="#E6E6E6">
+                              <g transform="translate(153.000000, 45.000000)">
+                                <g transform="translate(409.000000, 0.000000)">
+                                  <g transform="translate(20.000000, 22.000000)">
+                                    <path d="M18 0L2 0C0.9 0 0 0.9 0 2L0 14C0 15.1 0.9 16 2 16L18 16C19.1 16 20 15.1 20 14L20 2C20 0.9 19.1 0 18 0L18 0ZM18 14L2 14 2 8 18 8 18 14 18 14ZM18 4L2 4 2 2 18 2 18 4 18 4Z"/>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 class="step-title">Second step</h3>
+                        <span class="step-sub-title">Payment Methods</span>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="modal-body">
+                <div class="row" data-step="1" id="step1" data-title="step one">
+                  <div class="form-container">
+                    <form id="joinForm" method="get" action="">
+                      <div class="header-error"><span></span></div>
+                      <p><input class="input" type="text" id="firstname" name="firstname" placeholder="First Name" value="" minlength="2" required></p>
+                      <p><input class="input" type="text" id="lastname" name="lastname" placeholder="Last Name" value="" minlength="2" required></p>
+                      <p><input class="input" type="email" id="email" name="email" placeholder="E-mail" value="" required></p>
+                      <p>
+                        <select class="select" id="occupation" name="occupation" required>
                           <option value="" selected disabled>What do you do?</option>
                           <option value="designer">Designer / UX</option>
                           <option value="developer">Web or Mobile Developer / Programmer</option>
@@ -175,268 +152,309 @@
                           <option value="photographer">Photographer / Videographer</option>
                           <option value="other">Other</option>
                         </select>
-                                        </p>
-                                        <p class="other-field"></p>
-                                        <button class="button next-button pull-right" data-orientation="next" type="submit">Next</button>
-                                        <button onclick="checkDrip()">click</button>
-                                        <!--<button type="button" class="button next-button js-btn-step pull-right" data-orientation="next" onclick=>Check</button>
-                                        <button type="button" class="button next-button js-btn-step pull-right" data-orientation="next" onclick="fbq('track', 'InitiateCheckout')">Next page</button>-->
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="row hide" data-step="2" data-title="step two">
-                                <div class="payment-container">
-                                    <div class="reason-column">
-                                        <div class="left-section">
-                                            <div class="reason-container">
-                                                <div class="left-column">
-                                                    <img src="img/icons/tick.svg" alt="">
-                                                </div>
-                                                <div class="right-column">
-                                                    <h3 class="reason-title">Join 1000+ Freelancers</h3>
-                                                    <p class="reason-message">
-                                                        #freelance is the largest and most engaged freelancing community on slack.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="reason-container">
-                                                <div class="left-column">
-                                                    <img src="img/icons/tick.svg" alt="">
-                                                </div>
-                                                <div class="right-column">
-                                                    <h3 class="reason-title">Find Job Opportunities</h3>
-                                                    <p class="reason-message">
-                                                        Give and receive referrals, partner with other freelancers on jobs and find new clients within the community.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="right-section">
-                                            <div class="reason-container">
-                                                <div class="left-column">
-                                                    <img src="img/icons/tick.svg" alt="">
-                                                </div>
-                                                <div class="right-column">
-                                                    <h3 class="reason-title">Weekly Webinars</h3>
-                                                    <p class="reason-message">
-                                                        Watch webinars given by experts and have the opportunity to pitch your own services to the community.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="reason-container">
-                                                <div class="left-column">
-                                                    <img src="img/icons/tick.svg" alt="">
-                                                </div>
-                                                <div class="right-column">
-                                                    <h3 class="reason-title">Freelancing Newsletter</h3>
-                                                    <p class="reason-message">
-                                                        Share articles with the community and stay up-to-date with the latest in the freelancing world.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="stripe-column">
-                                        <script src="https://checkout.stripe.com/checkout.js"></script>
-
-                                        <button type="submit" id="buyMembership" class="button buy-membership" onclick="fbq('track', 'AddPaymentInfo')">Buy Membership - $49/year</button>
-
-                                        <script>
-                                            var handler = StripeCheckout.configure({
-                                                key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
-                                                image: 'http://oi63.tinypic.com/mn2gyt.jpg',
-                                                locale: 'auto',
-                                                token: function (token) {
-                                                    fbq('track', 'Purchase', { value: '49.00', currency: 'USD' });
-                                                }
-                                            });
-
-                                            document.getElementById('buyMembership').addEventListener('click', function (e) {
-                                                // Open Checkout with further options:
-                                                handler.open({
-                                                    name: 'Freelance Chat',
-                                                    description: 'Yearly Membership',
-                                                    zipCode: true,
-                                                    amount: 4900
-                                                });
-                                                e.preventDefault();
-                                            });
-
-                                            // Close Checkout on page navigation:
-                                            window.addEventListener('popstate', function () {
-                                                handler.close();
-                                            });
-                                        </script>
-
-                                        <h3><i class="fa fa-lock" aria-hidden="true"></i> No Questions Asked, 100% Money-Back
-                                            Guarantee
-                                        </h3>
-                                        <img src="img/powered_by_stripe.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
+                      </p>
+                      <p class="other-field"></p>
+                      <!--<button class="button next-button pull-right" type="submit">Next1</button>-->
+                      <!--<button type="button" class="button next-button js-btn-step pull-right" data-orientation="next" onclick="fbq('track', 'InitiateCheckout')">Next page</button>-->
+                      <button type="submit" id="stepbtn1" class="button next-button pull-right" data-orientation="next" onclick="fbq('track', 'InitiateCheckout')">Next page</button>
+                    </form>
+                  </div>
+                </div>
+                <div class="row" data-step="2" id="step2" data-title="step two" style="display:none;">
+                  <div class="payment-container">
+                    <div class="reason-column">
+                      <div class="left-section">
+                        <div class="reason-container">
+                          <div class="left-column">
+                            <img src="img/icons/tick.svg" alt="">
+                          </div>
+                          <div class="right-column">
+                            <h3 class="reason-title">Join 1000+ Freelancers</h3>
+                            <p class="reason-message">
+                              #freelance is the largest and most engaged freelancing community on slack.
+                            </p>
+                          </div>
                         </div>
-                        <!--<div class="modal-footer">
+                        <div class="reason-container">
+                          <div class="left-column">
+                            <img src="img/icons/tick.svg" alt="">
+                          </div>
+                          <div class="right-column">
+                            <h3 class="reason-title">Find Job Opportunities</h3>
+                            <p class="reason-message">
+                              Give and receive referrals, partner with other freelancers on jobs and find new clients within the community.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="right-section">
+                        <div class="reason-container">
+                          <div class="left-column">
+                            <img src="img/icons/tick.svg" alt="">
+                          </div>
+                          <div class="right-column">
+                            <h3 class="reason-title">Weekly Webinars</h3>
+                            <p class="reason-message">
+                              Watch webinars given by experts and have the opportunity to pitch your own services to the community.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="reason-container">
+                          <div class="left-column">
+                            <img src="img/icons/tick.svg" alt="">
+                          </div>
+                          <div class="right-column">
+                            <h3 class="reason-title">Freelancing Newsletter</h3>
+                            <p class="reason-message">
+                              Share articles with the community and stay up-to-date with the latest in the freelancing world.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="stripe-column">
+                      <script src="https://checkout.stripe.com/checkout.js"></script>
+
+                      <button type="submit" id="buyMembership" class="button buy-membership" onclick="fbq('track', 'AddPaymentInfo')">Buy Membership - $49/year</button>
+
+                      <script>
+                      var handler = StripeCheckout.configure({
+                        key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
+                        image: 'http://oi63.tinypic.com/mn2gyt.jpg',
+                        locale: 'auto',
+                        token: function(token) {
+                          userFormDetails.tags.push("successful_payment")
+                          console.log(userFormDetails)
+                           _dcq.push(["identify", {
+                                success: function (res) {
+                                  console.log(res,"stripe");
+                                  $("#joinModal").modal("hide");
+                                },
+                                failure: function () {
+                                  console.log("fail");
+                                },
+                                email: userFormDetails.email,
+                                first_name: userFormDetails.first_name,
+                                last_name:userFormDetails.last_name,
+                                tags: userFormDetails.tags
+                              }])
+                          fbq('track', 'Purchase', {value: '49.00', currency:'USD'});
+                        }
+                      });
+
+                      document.getElementById('buyMembership').addEventListener('click', function(e) {
+                        // Open Checkout with further options:
+                        handler.open({
+                          name: 'Freelance Chat',
+                          description: 'Yearly Membership',
+                          zipCode: true,
+                          amount: 4900
+                        });
+                        e.preventDefault();
+                      });
+
+                      // Close Checkout on page navigation:
+                      window.addEventListener('popstate', function() {
+                        handler.close();
+                      });
+                      </script>
+
+                      <h3><i class="fa fa-lock" aria-hidden="true"></i> No Questions Asked, 100% Money-Back Guarantee</h3>
+                      <img src="img/powered_by_stripe.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--<div class="modal-footer">
                 <button type="button" class="btn btn-warning js-btn-step pull-left" data-orientation="previous"></button>
                 <button type="button" class="btn btn-success js-btn-step" data-orientation="next"></button>
               </div>-->
-                    </div>
-                </div>
             </div>
-        </header>
-        <section class="benefits">
-            <h2 class="benefit-title">Why Smart Freelancers are<br /> Joining #freelance</h2>
-            <div class="benefits-container">
-                <div class="column">
-                    <img src="img/icons/hangout.svg" alt="">
-                    <h4 class="header-feature-title">Virtual Water Cooler</h4>
-                    <p class="header-feature-message">Take a break in your day to shoot the breeze, get tips, or just mess around.</p>
-                </div>
-                <div class="column">
-                    <img src="img/icons/discover.svg" alt="">
-                    <h4 class="header-feature-title">Discover Opportunities</h4>
-                    <p class="header-feature-message">Find new clients and other creatives eager to partner up on projects.</p>
-                </div>
-                <div class="column">
-                    <img src="img/icons/share.svg" alt="">
-                    <h4 class="header-feature-title">Share Knowledge</h4>
-                    <p class="header-feature-message">Share your experiences and learn insider secrets from freelancing veterans.</p>
-                </div>
+          </div>
+        </div>
+      </header>
+      <section class="benefits">
+        <h2 class="benefit-title">Why Smart Freelancers are<br /> Joining #freelance</h2>
+        <div class="benefits-container">
+          <div class="column">
+            <img src="img/icons/hangout.svg" alt="">
+            <h4 class="header-feature-title">Virtual Water Cooler</h4>
+            <p class="header-feature-message">Take a break in your day to shoot the breeze, get tips, or just mess around.</p>
+          </div>
+          <div class="column">
+            <img src="img/icons/discover.svg" alt="">
+            <h4 class="header-feature-title">Discover Opportunities</h4>
+            <p class="header-feature-message">Find new clients and other creatives eager to partner up on projects.</p>
+          </div>
+          <div class="column">
+            <img src="img/icons/share.svg" alt="">
+            <h4 class="header-feature-title">Share Knowledge</h4>
+            <p class="header-feature-message">Share your experiences and learn insider secrets from freelancing veterans.</p>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <div class="feature-row">
+          <div class="features-content">
+            <div class="feature-icon pad">
+              <li class="ion-android-contacts" data-pack="android" data-tags=""></li>
             </div>
-        </section>
-        <section class="features">
-            <div class="feature-row">
-                <div class="features-content">
-                    <div class="feature-icon pad">
-                        <li class="ion-android-contacts" data-pack="android" data-tags=""></li>
-                    </div>
-                    <div class="feature-message">
-                        <h2 class="feature-title">Find New Freelancing</h2>
-                        <h3 class="feature-sub-title">Job Opportunities</h3>
-                        <ul>
-                            <li>Give and receive job referrals</li>
-                            <li>Partner with other freelancers on projects</li>
-                            <li>Discover new clients in the community</li>
-                            <li><a href="" data-toggle="modal" data-target="#joinModal" onclick="fbq('track', 'Lead')">Join Community Now</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="feature-message">
+              <h2 class="feature-title">Find New Freelancing</h2>
+              <h3 class="feature-sub-title">Job Opportunities</h3>
+              <ul>
+                <li>Give and receive job referrals</li>
+                <li>Partner with other freelancers on projects</li>
+                <li>Discover new clients in the community</li>
+                <li><a href="" data-toggle="modal" data-target="#joinModal" onclick="fbq('track', 'Lead')">Join Community Now</a></li>
+              </ul>
             </div>
-            <div class="feature-row feature-background">
-                <div class="features-content">
-                    <div class="feature-message pad">
-                        <h2 class="feature-title">Join and Present In</h2>
-                        <h3 class="feature-sub-title">Weekly Webinars</h3>
-                        <ul>
-                            <li>Watch webinars given by experts</li>
-                            <li>Have the chance to pitch your services</li>
-                            <li>Learn & share insider secrets and tactics</li>
-                            <li><a href="" data-toggle="modal" data-target="#joinModal" onclick="fbq('track', 'Lead')">Join Community Now</a></li>
-                        </ul>
-                    </div>
-                    <div class="feature-icon">
-                        <li class="ion-easel" data-pack="default" data-tags=""></li>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="feature-row feature-background">
+          <div class="features-content">
+            <div class="feature-message pad">
+              <h2 class="feature-title">Join and Present In</h2>
+              <h3 class="feature-sub-title">Weekly Webinars</h3>
+              <ul>
+                <li>Watch webinars given by experts</li>
+                <li>Have the chance to pitch your services</li>
+                <li>Learn & share insider secrets and tactics</li>
+                <li><a href="" data-toggle="modal" data-target="#joinModal" onclick="fbq('track', 'Lead')">Join Community Now</a></li>
+              </ul>
             </div>
-            <div class="feature-row">
-                <div class="features-content">
-                    <div class="feature-icon pad">
-                        <li class="ion-email" data-pack="default" data-tags=""></li>
-                    </div>
-                    <div class="feature-message">
-                        <h2 class="feature-title">Receive Our Freelancing</h2>
-                        <h3 class="feature-sub-title">Email Roundup</h3>
-                        <ul>
-                            <li>Submit articles to channels for discussion</li>
-                            <li>Learn & share experiences from the web</li>
-                            <li>Receive the best-of every Friday by email</li>
-                            <li><a href="" data-toggle="modal" data-target="#joinModal" onclick="fbq('track', 'Lead')">Join Community Now</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="feature-icon">
+              <li class="ion-easel" data-pack="default" data-tags=""></li>
             </div>
-        </section>
-        <section class="application">
-            <div class="application-content">
-                <h2 class="application-title">It’s the Modern Way to Network</h2>
-                <h3 class="application-sub-title">Form networks and friendships with freelancers across the globe.</h3>
-                <img class="desktop-device-pic" src="img/devices/browser.png" alt="Freelance slack channel">
-                <img class="mobile-device-pic" src="img/devices/mobile.png" alt="Freelance slack channel">
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="features-content">
+            <div class="feature-icon pad">
+              <li class="ion-email" data-pack="default" data-tags=""></li>
             </div>
-        </section>
-        <section class="cta">
-            <h2 class="cta-title">Join #freelance for $49/year</h2>
-            <h3 class="cta-sub-title"><i class="fa fa-lock" aria-hidden="true"></i> 100% Money-Back Guarantee</h3>
-            <div><a class="button cta-button" href="#" data-toggle="modal" data-target="#joinModal" onclick="fbq('track', 'Lead')">Join Community Now</a></div>
-        </section>
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="logo-footer-column">
-                    <img src="img/logo/logo-footer.svg" alt="Freelance logo">
-                </div>
-                <div class="links-footer-column">
-                    <ul class="inline-links">
-                        <li><a href="terms.html">Terms</a></li>
-                        <li><a href="mailto:connor@freelance.chat">Contact</a></li>
-                    </ul>
-                </div>
+            <div class="feature-message">
+              <h2 class="feature-title">Receive Our Freelancing</h2>
+              <h3 class="feature-sub-title">Email Roundup</h3>
+              <ul>
+                <li>Submit articles to channels for discussion</li>
+                <li>Learn & share experiences from the web</li>
+                <li>Receive the best-of every Friday by email</li>
+                <li><a href="" data-toggle="modal" data-target="#joinModal" onclick="fbq('track', 'Lead')">Join Community Now</a></li>
+              </ul>
             </div>
-        </footer>
+          </div>
+        </div>
+      </section>
+      <section class="application">
+        <div class="application-content">
+          <h2 class="application-title">It’s the Modern Way to Network</h2>
+          <h3 class="application-sub-title">Form networks and friendships with freelancers across the globe.</h3>
+          <img class="desktop-device-pic" src="img/devices/browser.png" alt="Freelance slack channel">
+          <img class="mobile-device-pic" src="img/devices/mobile.png" alt="Freelance slack channel">
+        </div>
+      </section>
+      <section class="cta">
+          <h2 class="cta-title">Join #freelance for $49/year</h2>
+          <h3 class="cta-sub-title"><i class="fa fa-lock" aria-hidden="true"></i> 100% Money-Back Guarantee</h3>
+          <div><a class="button cta-button" href="#" data-toggle="modal" data-target="#joinModal" onclick="fbq('track', 'Lead')">Join Community Now</a></div>
+      </section>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="logo-footer-column">
+            <img src="img/logo/logo-footer.svg" alt="Freelance logo">
+          </div>
+          <div class="links-footer-column">
+            <ul class="inline-links">
+              <li><a href="terms.html">Terms</a></li>
+              <li><a href="mailto:connor@freelance.chat">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-bootstrap-modal-steps.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
     <script>
-                                            $('#joinModal').modalSteps();
-                                            $(document).ready(function () {
-                                                $("#joinForm").validate({
-                                                    invalidHandler: function (event, validator) {
-                                                        // 'this' refers to the form
-                                                        var errors = validator.numberOfInvalids();
-                                                        if (errors) {
-                                                            var message = errors == 1
-                                                                ? 'Important: You missed 1 field. It has been highlighted'
-                                                                : 'Important: You missed ' + errors + ' fields. They have been highlighted';
-                                                            $("div.header-error span").html(message);
-                                                            $("div.header-error").show();
-                                                        } else {
-                                                            $("div.header-error").hide();
-                                                            //$("input.button.next-button.pull-right").addClass("js-btn-step");
-                                                        }
-                                                    },
-                                                    messages: {
-                                                        firstname: {
-                                                            required: "Please specify your first name",
-                                                            minlength: jQuery.validator.format("At least {0} characters required!")
-                                                        },
-                                                        lastname: {
-                                                            required: "Please specify your last name",
-                                                            minlength: jQuery.validator.format("At least {0} characters required!")
-                                                        },
-                                                        email: {
-                                                            required: "We need your email address to contact you",
-                                                            email: "Your email address must be in the format of name@domain.com"
-                                                        },
-                                                        occupation: "Please specify your occupation",
-                                                        other: "Please specify your occupation"
-                                                    },
-                                                    submitHandler: function (form) {
-                                                        if (this.valid()) {
-                                                            $("button.button.next-button.pull-right").addClass("js-btn-step").removeAttr("type").attr("type", "button").attr("data-orientation", "next").attr("onclick", "fbq('track', 'InitiateCheckout')");
-                                                        }
-                                                    }
-                                                });
+      $('#joinModal').modalSteps();
+      $(document).ready(function(){
+        $("#joinForm").validate({
+          invalidHandler: function(event, validator) {
+            // 'this' refers to the form
+            var errors = validator.numberOfInvalids();
+            if (errors) {
+              var message = errors == 1
+                ? 'Important: You missed 1 field. It has been highlighted'
+                : 'Important: You missed ' + errors + ' fields. They have been highlighted';
+              $("div.header-error span").html(message);
+              $("div.header-error").show();
+            } else {
+              $("div.header-error").hide();
+              //$("input.button.next-button.pull-right").addClass("js-btn-step");
+            }
+          },
+          messages: {
+            firstname: {
+              required: "Please specify your first name",
+              minlength: jQuery.validator.format("At least {0} characters required!")
+            },
+            lastname: {
+              required: "Please specify your last name",
+              minlength: jQuery.validator.format("At least {0} characters required!")
+            },
+            email: {
+              required: "We need your email address to contact you",
+              email: "Your email address must be in the format of name@domain.com"
+            },
+            occupation: "Please specify your occupation",
+            other: "Please specify your occupation"
+          },
+          submitHandler:function(form){           
+            if (this.valid()){
+              
+                var first_name = $(form).find('input[name="firstname"]').val()
+                var last_name = $(form).find('input[name="lastname"]').val()
+                var email = $(form).find('input[name="email"]').val()
+                var tags = $(form).find('select[name="occupation"]').val()
+                              userFormDetails = { email, first_name, last_name, tags: [tags] }
+                              _dcq.push(["identify", {
+                                success: function (res) {
+                                  console.log(res,"res")
 
-                                                $('.select').change(function () {
-                                                    if ($(this).val() === 'other')
-                                                        $("p.other-field").html("<input class='input' type='text' id='other-occupation' name='other' placeholder='What do you do?' value='' required>");
-                                                    else
-                                                        $("p.other-field").empty();
-                                                });
-                                            });
+                                  $("#step1").hide();
+                                 $(document).ajaxStart(function(){
+                                  $("#wait").css("display", "block");
+                                 });
+                                  $("#step2").show();
+                                  $('#joinForm').each(function () {
+                                    this.reset();
+                                  });
+                                },
+                                failure: function () {
+                                  console.log("fail");
+                                },
+                                email: userFormDetails.email,
+                                first_name: userFormDetails.first_name,
+                                last_name:userFormDetails.last_name,
+                                tags: userFormDetails.tags
+                              }])
+                              console.log(form)
+                              
+                              
+              // $("button.button.next-button.pull-right").addClass("js-btn-step").removeAttr("type").attr("type", "button").attr("data-orientation", "next").attr("onclick", "fbq('track', 'InitiateCheckout')");
+            }
+          }
+        });
+
+        $('.select').change(function(){
+          if($(this).val() === 'other')
+            $("p.other-field").html("<input class='input' type='text' id='other-occupation' name='other' placeholder='What do you do?' value='' required>");
+          else
+            $("p.other-field").empty();
+        });
+      });
     </script>
-</body>
-
+  </body>
 </html>
