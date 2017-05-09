@@ -8,21 +8,15 @@
     color: rgb(46, 50, 90);
     font-weight: 600;
 }
-@media (min-width: 1200px){
-    .nav-header-container .container {
-        width: 1400px;
-    }
-}
-.nav-header-container .search-engien{
+.nav-header-container .search-engine{
     box-shadow: none;
     border: none;
     outline: none;
-    display: inline;
+    
 }
 .nav-header-container .search-icon{
     height: 25px;
     width: 25px;
-    margin-left: 100px;
 }
 .nav-header-container .searchbar-group{
     padding-top: 20px;
@@ -34,11 +28,9 @@
 
 .nav-header-container .notify-icon{
     width: 20px;
-    height: 20px;
+    
     font-size: 25px;
     font:grey;
-    margin-left: 529px;
-    margin-top:5px;
 }
 .nav-header-container .line{
     width: 0px;
@@ -47,125 +39,54 @@
     margin-left: 25px;
     margin-right: 0px;
 }
-.nav-header-container .profile{
-    list-style: none;
-    text-decoration-style: none;
-    margin-top: 30px;
-    text-align: right;
-    float: right;
-    width: 280px;
-}
 .nav-header-container .username{
-    margin: 0 auto;
+
     display: inline-block;
-    text-align: right;
     font-family: Arial;
-    font-size: 14px;
+    font-size: 1em;
     font-weight: 600;
-    text-align: left;
     color: #2b345b;
+    margin-top: -12px;
+    position: relative;
+    left: 100px
 }
 .nav-header-container .user-address{
-    margin: 0 auto;
-    margin-top: 0px;
     display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 1em;
     font-weight: 600;
     color: #aeaeae;
     text-align: right;
+    position: relative;
+    top:-10px
 }
 .nav-header-container .profile-img{
     width: 54px;
     height: 54px;
     border-radius: 100px;
     margin-top: -10px;
-
+    margin-left: -14px;
 }
-.nav-header-container .pgrp{
-    line-height: 15px;
-    float: left;
-    text-align: right;
-    margin: 0px;
-    padding: 0px;
-}
-
-.nav-header-container .dropdown-bar{
-    display: inline;
-}
-.nav-header-container .notify-dropdown{
-    list-style: none;
-    display: inline;
-}
-@media only screen and (max-width: 1200px) {
-.nav-header-container .notify-icon{
-    width: 20px;
-    height: 20px;
-    margin-left: 6px;
-}   
-}
-@media only screen and (max-width: 1200px)  {
-.nav-header-container .search-icon{
-    height: 25px;
-    width: 25px;
-    margin-left: -15px;
-    }   
-}
-@media only screen and (max-width: 1200px)  {
-.nav-header-container .profile{
-    list-style: none;
-    text-decoration-style: none;
+.nav-header-container .middle-col{
+    margin-top: 20px;
+}.nav-header-container .right-col{
     margin-top: 30px;
-    text-align: right;
-    float: right;
-    width: 280px;
-    margin-left: -50px;
-    }   
 }
-/*@media only screen and (max-width: 1450px)  {
-.nav-header-container .profile{
-    list-style: none;
-    text-decoration-style: none;
-    margin-top: 30px;
-    text-align: right;
-    float: right;
-    width: 280px;
-    margin-left: -50px;
-    }   
-}*/
-@media only screen and (max-width: 768px)  {
-.nav-header-container .searchbar-group{
-    padding: 0px;
-    margin-top: 25px;
-    width: 70%;
-    display: inline-flex;
-    position: absolute;
-    border: none;
-    }   
+.nav-header-container .right-col .right-col-profile{
+    margin-top: -60px;
+    margin-left: 336px
 }
-@media only screen and (max-width: 768px)  {
-.nav-header-container .search-icon{
-    height: 25px;
-    width: 25px;
-    margin-top: 3px;
-    margin-left: 14px;
-    /*margin-left: -15px;*/
-    }   
+.nav-header-container .right-col .right-col-userDetail{
+    margin-top: -30px;
+    margin-left: 86px
 }
-@media only screen and (max-width: 768px)  {
-.nav-header-container .notify-icon{
-    height: 20px;
-    width: 20px;
-    margin-left: -18px;
-    margin-top: 6px;
-    }   
-}
-@media only screen and (max-width: 768px)  {
-.nav-header-container .search-engien{
-    margin-top: 1px;
-    display: inherit;
-    }   
-}
-.nav-header-container .toggle-bar{
-    margin: 25px;
+
+@media only screen and (max-width:598px){
+    .nav-header-container .middle-col{
+        width: 100%;
+    }
+    .nav-header-container .right-col .username{
+        font-weight: normal;
+        font-size: 12px;
+    }
 }
