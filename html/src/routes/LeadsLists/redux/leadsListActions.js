@@ -7,6 +7,7 @@ export const GET_LEADS_LIST_FAILURE = 'LeadsList.GET_LEADS_LIST_FAILURE'
 export const UPDATE_LEADS_LIST_ATTEMPT = 'LeadsList.UPDATE_LEADS_LIST_ATTEMPT' 
 export const UPDATE_LEADS_LIST_SUCCESS = 'LeadsList.UPDATE_LEADS_LIST_SUCCESS'
 export const UPDATE_LEADS_LIST_FAILURE = 'LeadsList.UPDATE_LEADS_LIST_FAILURE'
+export const DELETE_LEADS_LIST_ATTEMPT = 'DELETE_LEADS_LIST_ATTEMPT'
 
 //-------------------------------------
 // Actions
@@ -36,4 +37,8 @@ export const updateLeadsListSuccess = ()=>({
 })
 export const updateLeadsListFailure = ()=>({
 type:UPDATE_LEADS_LIST_FAILURE
+})
+export const deleteLeadsListAttempt = (uid)=>({
+  type:DELETE_LEADS_LIST_ATTEMPT,
+  uid
 })

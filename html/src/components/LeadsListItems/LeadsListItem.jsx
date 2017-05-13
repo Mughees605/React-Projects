@@ -12,13 +12,14 @@ class LeadsListItem extends Component {
 
   render() {
     let closeEditListModal = () => this.setState({editListModal: false})
-    const {Index,onUpdate,listName} = this.props
+    const {Index,onUpdate,listName,onDelete} = this.props
     return (
       <div className='lead-container'>
         <EditListModel
           listName={listName}
           Index={Index}
           onUpdate={onUpdate}
+          onDelete={onDelete}
           onShow={this.state.editListModal}
           onHide={closeEditListModal}/>
         <Row className='show-grid'>

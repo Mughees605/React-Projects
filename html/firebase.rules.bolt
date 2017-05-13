@@ -1,0 +1,133 @@
+path / {
+  read() { false }
+  write() { false }
+}
+
+path /users {
+  read() { false }
+  write() { false }
+}
+
+path /users/{userId} {
+  read() {
+    isCurrentUser(userId)
+  }
+  write() {
+    isCurrentUser(userId)
+  }
+}
+
+path /leads {
+  read() {  isSignedIn() }
+  write() { false }
+}
+
+path /leads_list {
+  read() { false }
+  write() { false }
+}
+
+path /leads_list/{userId} {
+  read() {
+     isCurrentUser(userId)
+   }
+   write() {
+     isCurrentUser(userId)
+   }
+}
+
+path /leads_list/{userId}/{leadId} is LeadsList{
+  read() {
+     isCurrentUser(userId)
+   }
+   write() {
+     isCurrentUser(userId)
+   }
+}
+
+path /sales_steps {
+  read() { false }
+  write() { false }
+}
+
+path /sales_steps/{userId}{
+  read() {
+     isCurrentUser(userId)
+   }
+   write() {
+     isCurrentUser(userId)
+   }
+}
+
+path /sales_steps/{userId}/{leadId} is SalesSteps{
+  read() {
+     isCurrentUser(userId)
+   }
+   write() {
+     isCurrentUser(userId)
+   }
+}
+
+path /templates {
+  read() { false }
+  write() { false }
+}
+
+path /templates/{userId} {
+  read() {
+     isCurrentUser(userId)
+   }
+   write() {
+     isCurrentUser(userId)
+   }
+}
+
+path /templates/{userId}/{templateId} is Template {
+  read() {
+     isCurrentUser(userId)
+   }
+   write() {
+     isCurrentUser(userId)
+   }
+}
+
+path /premium_templates {
+  read() {
+   isSignedIn()
+  }
+  write() { false }
+}
+
+path /premium_templates/{templateId} is Template {
+  read() {
+     hasAccess()
+   }
+   write() {
+     hasAccess()
+   }
+}
+
+type LeadsList {
+  name: String,
+  leads: Object | Null
+}
+
+type SalesSteps {
+  steps: Object,
+  status: String
+}
+
+type Template {
+  title: String,
+  subject: String,
+  content: String,
+  variables: Object | Null
+}
+
+
+isCurrentUser(uid) { isSignedIn() && auth.uid == uid }
+
+isSignedIn() { auth != null }
+
+hasAccess() { isSignedIn() && auth.subscription_level > 0 }
+

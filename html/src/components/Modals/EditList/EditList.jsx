@@ -10,6 +10,11 @@ const CreateNewListModal = React.createClass({
     onUpdate(Index,text);
     onHide();
   },
+  deleteList(){
+    var {Index,onDelete,onHide} = this.props; 
+    onDelete(Index); 
+    onHide();
+  },
   render() {
     const {onShow,onHide,listName} = this.props;
     return (
@@ -45,7 +50,7 @@ const CreateNewListModal = React.createClass({
               <button
                 type='button'
                 className={cn(s.btn, 'btns contact-btn-red')}
-                onClick={onHide}>Delete
+                onClick={this.deleteList}>Delete
               </button>
               <button
                 type='button'

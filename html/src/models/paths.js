@@ -28,3 +28,7 @@ export const premiumTemplates = premiumTemplateId =>
   premiumTemplateId
     ? `/premiumTemplates/${premiumTemplateId}`
     : '/premiumTemplates'
+export const deleteLeads = (leadListId, uid = getUid()) =>
+  leadListId ?
+    `/leads_lists/${uid}/${leadListId}` :
+     `/leads_lists/${uid}`

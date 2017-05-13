@@ -28,7 +28,7 @@ class LeadsLists extends Component {
           <Panel key={listItem.key}>
 
             {/*{console.log(listItem.key,"listItem")}*/}
-            <LeadsListItems listName={listItem.value.name} Index={listItem.key} onUpdate={this.props.updateLeadsListAttempt}/>
+            <LeadsListItems listName={listItem.value.name} Index={listItem.key} onUpdate={this.props.updateLeadsListAttempt} onDelete={this.props.deleteLeadsListAttempt}/>
           </Panel>
         )
       }

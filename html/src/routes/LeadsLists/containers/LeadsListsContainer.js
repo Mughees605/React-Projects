@@ -1,8 +1,8 @@
 import {connect} from 'react-redux'
 import LeadsLists from '../components/LeadsLists'
-import {getLeadsListsAttempt,updateLeadsListAttempt} from '../redux/leadsListActions'
+import {getLeadsListsAttempt,updateLeadsListAttempt,deleteLeadsListAttempt} from '../redux/leadsListActions'
 
-const mapActionCreators = {getLeadsListsAttempt,updateLeadsListAttempt}
+const mapActionCreators = {getLeadsListsAttempt,updateLeadsListAttempt,deleteLeadsListAttempt}
 
 const mapStateToProps = ({
   leadsLists: {

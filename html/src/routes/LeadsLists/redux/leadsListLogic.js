@@ -6,11 +6,14 @@ import {
 
   UPDATE_LEADS_LIST_ATTEMPT,
   updateLeadsListSuccess,
-  updateLeadsListFailure
+  updateLeadsListFailure,
+
+  DELETE_LEADS_LIST_ATTEMPT
 } from './leadsListActions'
 
 import {getLeadsLists} from 'models/leadsLists/getLeadsLists'
 import {updateLeadsList} from 'models/leadsLists/updateLeadsList'
+import {deleteLeadsList} from 'models/leadsLists/deleteLeadsList'
 
 const debug = require('debug')('app:leadsListLogic')
 
@@ -33,7 +36,7 @@ export const getLeadsListAttempt = createLogic({
     done()
   },
 })
-export const updateLeadListAttemp = createLogic({
+export const updateLeadListAttempt = createLogic({
   type: UPDATE_LEADS_LIST_ATTEMPT,
   latest: true,
   process: async ({getState, action},dispatch, done) => {
@@ -48,8 +51,24 @@ export const updateLeadListAttemp = createLogic({
     done()
   },
 })
+export const deleteLeadListAttempt = createLogic({
+  type: DELETE_LEADS_LIST_ATTEMPT,
+  latest: true,
+  process: async ({getState, action},dispatch, done) => {
+    try {
+      console.log(action.uid,"from redux logic");
+      const deleteLeads = await deleteLeadsList(action.uid)
+    } 
+    catch (err){
+      
+      debug(err)
+    }  
+    done()
+  },
+})
 
 export default [
   getLeadsListAttempt,
-  updateLeadListAttemp
+  updateLeadListAttempt,
+  deleteLeadListAttempt
 ]
