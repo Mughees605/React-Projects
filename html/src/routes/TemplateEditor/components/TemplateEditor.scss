@@ -1,0 +1,251 @@
+@import "~styles/shared";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+:global {
+
+  .editor-container {
+    padding: 10px;
+  }
+
+  .editor-container .title-container {
+    padding-top: 15px;
+    padding-bottom: 17px;
+  }
+
+  .editor-container .title-container button {
+    margin-top: -45px;
+    width: 115px;
+    height: 40.3px;
+    border-radius: 5px;
+    background-color: #8dc73f;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    outline: none;
+    border: none;
+  }
+
+  .editor-container .title-container h2 {
+    color: #8dc73f;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  .editor-container .title-container span {
+    margin: 3px;
+  }
+
+  .editor-container .title-container .nameTitle {
+    color: #2b345b;
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  .editor-container .title-container .name {
+    font-weight: bold;
+    font-size: 25px
+  }
+
+  .editor-container .title-container .icon {
+    color: #aeaeae;
+    font-size: 21px;
+  }
+
+  .editor-container .first-col .first-col-head {
+    /*width: 522px;*/
+    height: 71px;
+    background-color: #ffffff;
+    border-radius: 5px 5px 0px 0px;
+    padding-left: 10px;
+    padding-top: 0.1px;
+  }
+
+  .editor-container .first-col .first-col-head .template-editor {
+    width: 233px;
+    height: 32px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: left;
+    color: #6b6969;
+    margin-left: 20px
+  }
+
+  .editor-container .first-col .panel {
+    border-radius: none;
+    border: none;
+    background-color: #f8f8f8;
+    margin-top: 0px;
+  }
+
+  .editor-container .first-col .panel .panel-col {
+    margin-left: 20px;
+  }
+
+  .editor-container .first-col .panel .title {
+    width: 233px;
+    height: 23px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    color: #6b6969;
+  }
+
+  .editor-container .first-col .panel .dropdown {
+    /*width: 607px;*/
+    height: 46.5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: solid 1px #d0d7dd;
+  }
+
+  .editor-container .first-col .panel .subject-editor {
+    /*width: 607px;*/
+    height: 46.5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: solid 1px #d0d7dd;
+  }
+
+  .editor-container .first-col .panel .notice {
+    width: 233px;
+    height: 15px;
+    opacity: 0.5;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    color: #6b6969;
+    font-style: italic;
+    margin-top: 11px;
+  }
+
+  .editor-container .first-col .panel .btn-group {
+    width: 100%;
+    margin-top: 30px;
+    float: right;
+  }
+
+  .editor-container .first-col .panel .btn-group button {
+    width: 115px;
+    height: 40.3px;
+    border-radius: 5px;
+    background-color: #aeaeae;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin-right: 5px;
+    outline: none;
+  }
+
+  .editor-container .first-col .panel .btn-group .save {
+    border-radius: 5px;
+    background-color: #8dc73f;
+  }
+
+  .both {
+    border-radius: 5px;
+  }
+
+  /*FIRST COLOUMN STYLING END*/
+
+  /*second coloumn start*/
+  .editor-container .second-col .second-col-head {
+    height: 71px;
+    background-color: #ffffff;
+    border-radius: 5px 5px 0px 0px;
+    padding-left: 10px;
+    padding-top: 0.1px;
+    color: #6b6969;
+  }
+
+  .editor-container .second-col .second-col-head .template-editor {
+    width: 233px;
+    height: 32px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: left;
+    color: #6b6969;
+    margin-left: 20px
+
+  }
+
+  .editor-container .second-col .panel {
+    border-radius: none;
+    border: none;
+    background-color: #f8f8f8;
+    margin-top: 0px;
+  }
+
+  .editor-container .second-col .second-col-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    color: #989898;
+  }
+
+  .editor-container .second-col .second-col-boldText {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    color: #989898;
+    font-weight: bold;
+  }
+
+  .editor-container .second-col .lists {
+    padding: 10px;
+    text-align: left;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #989898;
+
+  }
+
+  .editor-container .list .list-name {
+    margin-top: -5px;
+  }
+
+  .editor-container .second-col .lists button {
+    width: 75px;
+    height: 30px;
+    margin-top: -10px;
+    border-radius: 5px;
+    background-color: #8dc73f;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    outline: none;
+    border: none;
+
+  }
+
+  @media only screen and (max-width: 660px) {
+    .editor-container .title-container button, .editor-container .first-col .panel .btn-group button, .editor-container .second-col .lists button {
+      margin-top: 5px;
+      margin-bottom: 10px;
+      width: 100%;
+      float: center;
+    }
+  }
+
+  @media only screen and (max-width: 660px) {
+    .editor-container .title-container span, .editor-container .title-container .nameTitle {
+      text-align: center;
+    }
+  }
+
+  @media only screen and (max-width: 660px) {
+    .editor-container .second-col .lists {
+      height: 120px;
+    }
+  }
+
+}

@@ -1,0 +1,83 @@
+.lead-container .header {
+  border-radius: 5px;
+      padding: 10px 0px;
+}
+
+.lead-container .btns {
+  display: block;  
+  font-family: SourceSansPro;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.lead-container .thumbnail-img{
+    height: 85px;
+    margin-top: 20px;
+}
+.lead-container .green-text{
+    color: #8dc73f
+}
+
+.lead-container .green-bg{
+    background-color: #8dc73f
+}
+.lead-container .des{
+  color:#aeaeae;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+}
+.lead-container .panel-heading{
+  background-color: white;
+}
+.lead-container .main-panel>.panel-body {
+    padding: 15px;
+    background-color: #f8f8f8;
+}
+.lead-container .tags-list{
+  display: inline-block;
+  padding-left: 15px;
+  margin: 0;
+      padding-top: 8px;
+    padding-bottom: 3px;
+}
+.lead-container .tags-list >li{
+  width: 77.6px;
+  height: 18px;
+  font-family: SourceSansPro;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #aeaeae;
+}
+.lead-container .edit-tags {
+  width: 100px;
+  height: 33px;
+  border-radius: 5px;
+  background-color: #aeaeae;
+  color: white;
+  float: right;
+}
+.lead-container .title-container{
+  padding-top: 15px;
+  padding-bottom: 17px;
+}
+.lead-container .title-container h2{
+  display: inline-block;
+}
+
+.lead-container .title-container p{
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #919191;
+  margin-right: 15px;
+}
+.lead-container .action-btn-group{
+  margin-top: 17px;
+}

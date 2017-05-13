@@ -1,0 +1,94 @@
+:global {
+  .nav-header-container .navbar-default {
+    background-color: white;
+    border-color: #e7e7e7;
+    min-height: 90px;
+  }
+  .nav-header-container .brand-name {
+    font-size: 35px;
+    color: rgb(46, 50, 90);
+    font-weight: 600;
+  }
+  @media (min-width: 1200px) {
+    .nav-header-container .container {
+      width: 1400px;
+    }
+  }
+  .nav-header-container .search-engien {
+    box-shadow: none;
+    border: none;
+    outline: none;
+    display: inline;
+  }
+  .nav-header-container .search-icon {
+    height: 25px;
+    width: 25px;
+    margin-left: 100px;
+  }
+  .nav-header-container .searchbar-group {
+    padding-top: 20px;
+  }
+  .nav-header-container {
+    border-top: 5px solid;
+    border-top-color: #8dc73f;
+  }
+
+  .nav-header-container .notify-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 529px;
+  }
+  .nav-header-container .line {
+    width: 0px;
+    border: 1px #eaeaea solid;
+    height: 30px;
+    margin-left: 25px;
+    margin-right: 0px;
+  }
+  .nav-header-container .profile {
+    list-style: none;
+    text-decoration-style: none;
+    margin-top: 30px;
+    text-align: right;
+    float: right;
+    width: 280px;
+  }
+  .nav-header-container .username {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: right;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    color: #2b345b;
+  }
+  .nav-header-container .user-address {
+    margin: 0 auto;
+    margin-top: 0px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #aeaeae;
+    text-align: right;
+  }
+  .nav-header-container .profile-img {
+    width: 54px;
+    height: 54px;
+    border-radius: 100px;
+    margin-top: -10px;
+
+  }
+  .nav-header-container .pgrp {
+    line-height: 15px;
+    float: left;
+    text-align: right;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .nav-header-container .dropdown-bar {
+    display: inline;
+  }
+}

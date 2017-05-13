@@ -1,0 +1,63 @@
+@import "~styles/shared";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+:global {
+  .createNewListModel .contact-btn {
+    background-color: #aeaeae;
+    color: white;
+  }
+  .createNewListModel .contact-btn-green {
+    background-color: #8dc73f;
+    color: white;
+  }
+
+  .createNewListModel .btns {
+    margin-right: 10px;
+    width: 135px;
+    height: 50px;
+    margin-bottom: 5px;
+  }
+
+  .createNewListModel .header {
+    height: 108px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  .createNewListModel .title {
+    height: 45px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #6b6a6a;
+    padding-top: 15px;
+  }
+  .createNewListModel .title .icon {
+    font-size: 25px;
+    font-weight: 100;
+    padding-right: 18px;
+  }
+  .createNewListModel .body {
+    background-color: #f8f8f8;
+  }
+  .createNewListModel .inputBox {
+    margin: 0 50px;
+    height: 65.3px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: solid 1px #d0d7dd;
+  }
+  .createNewListModel .input {
+    width: 98%;
+    height: 98%;
+    padding-left: 20px;
+    font-size: 22px;
+    color: #989898;
+    border: none;
+  }
+
+  .createNewListModel .footer {
+    border-top: none;
+  }
+}

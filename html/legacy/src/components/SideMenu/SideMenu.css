@@ -1,0 +1,41 @@
+.sidemenu-container #sidebar {
+  height: 100%;
+  padding-right: 0;
+}
+.sidemenu-container .sidebar-offcanvas .nav .nav.collapse,
+.sidemenu-container .sidebar-offcanvas .nav .nav.collapsing {
+    margin-left: 5%;
+    background-color: #f8f8f8;
+}
+
+.sidemenu-container .sidebar-offcanvas .nav .nav.collapse .nav {
+    position: absolute;
+    top: 0;
+    left: 155px;
+    z-index: 100;
+    background-color: #f8f8f8;
+}
+.sidemenu-container .sideBarCont {
+ background-color:'darkblue';
+ height:600
+}
+
+.sidemenu-container .sidemenu-a-color{
+   color: white;
+   padding: 30px 15px !important;
+ }
+ .navbar {
+   margin-bottom: 0;
+ }
+ .sidemenu-container .sidemenu-a-color:hover, 
+ .sidemenu-container .sidemenu-a-color:focus{
+   background-color: rgba(255, 255, 255, 0.1);
+ }
+ .sidemenu-container .active {
+   background-color: rgba(255, 255, 255, 0.1);
+  }
+
+.sidemenu-container .glyphicon{
+  padding-left: 10px;
+  padding-right: 20px;
+}

@@ -1,0 +1,47 @@
+@import "~styles/shared";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+:global {
+  .lead-container .header {
+    border-radius: 5px;
+    padding: 10px 0px;
+  }
+  .lead-container .panel-heading {
+    background-color: white;
+  }
+  .lead-container .main-panel > .panel-body {
+    padding: 26px 32px 26px 32px;
+    background-color: #f8f8f8;
+  }
+  .lead-container .title-container {
+    padding-top: 15px;
+    padding-bottom: 17px;
+  }
+  .lead-container .title-container h2 {
+    display: inline-block;
+    color: #2b345b;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  .lead-container .new-list-container {
+    display: inline-block;
+    float: right;
+  }
+  @media screen and (max-width: 475px) {
+    .lead-container .new-list-container {
+      float: none;
+    }
+  }
+  .lead-container .new-list {
+    width: 115px;
+    background-color: #8dc73f;
+    float: right;
+    margin-top: 20px;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
